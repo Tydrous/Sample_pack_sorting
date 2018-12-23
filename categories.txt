@@ -1,0 +1,7 @@
+Construction Kits & ideas          	: switch, sw, switches 
+Drums               			: kick, hihat, ohh, chh, tom, crash, cymbal, open hihat, closed hihat, drum, bassdrum, clap, fills, snare, snap, percussion, hi hat, bass drum, perc, ride, shaker, 808, drum loops, drumloops, top loop, bongo, conga,snare roll, drumm roll, rimshot, clave
+Foley & Atmo				: atmo, foley, atmosphere, texture, bird, footsteps, forest, rain, water, wind, glitch, Vinyl, city, nature,atm, ambient, ambiences
+FX					: fx loop, impact, riser, faller, fx, explosions, uplifer, downlifter, noise, sweeps up, sweep up, sweep down, sweeps down, deep hit, swoosh, short up, long up, effect
+Synths & Insts				: synth, instrument, inst, melodic,melody, lead, synthesizer, bass loop, chord loop, bass, pad, bass hit, synth hit, lead loop, bassline, arps, sub bass, sq, sequences, progression, guitar, hit, acid, drone, violin,cello,double bass,flute,clarinet,saxophone,trumpet,guitar,piano,harp, horn, digeridoo,paino,string, keyboard, keys
+Vocal					: vox, vocal, vocal atmosphere, acapella , vocal chop, chop, vocod, male, female, vocalist, vocal swell,Melodic Phrases, ooh, ahh, adlib melodies, scat
+Midi					: .midi, .mid
