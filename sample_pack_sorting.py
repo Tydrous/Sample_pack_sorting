@@ -1,8 +1,8 @@
 #! python3
 
 r'''
-Verison .01
-Written by Nick Bordo
+Verison .02
+Written by Tydrous
 Limitations
  - 
 
@@ -35,17 +35,13 @@ Notes of things to try and optimize
 
 
 What i'm currently working on
-- printing paer of the file path from the source folder rather than printing the entire new path when summarizing
-					>>> import os
-					>>> full_path = '/book/html/wa/foo/bar/'
-					>>> print os.path.relpath(full_path, '/book/html')
-					'wa/foo/bar'
+- Move a copy of the license file and readme files to all destiation folders
 - Finding a way to sort the catagories list into a longest prefix match type search so that most specific path matches first when searching through the files and folders. 
 	- Create a list rather than a dict so it is done in order. 
 	- List
 		tag 		category
 		0 			1
-- Figure out why the file open dialog doesn't quit on cancel
+
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
@@ -63,8 +59,8 @@ logging.basicConfig(filename='log_file.log', level=logging.DEBUG, format='%(asct
 root = tkinter.Tk()
 root.withdraw()#hides the initial dialog window
 
-#folder_categories_file = 'categories.txt'
-folder_categories_file = ''
+folder_categories_file = 'categories.txt'
+#folder_categories_file = ''
 
 file_moves = []#Will hold all of the sources and destination paths of files to be moved. 
 folder_moves = []#Will hold all of the sources and destination paths of folders to be moved. 
@@ -72,9 +68,14 @@ unmatched_files = []#will holld all the files that did not match anything
 unmatched_folders = []#Will hold all the folders that did not match anything
 skipped_files = []#Tracks the files that were skipped because they already existsed
 skipped_folders = []#Tracks the files that were skipped because they already existsed
+remember_source_starting_loc = ''#used to store previous source folder to reprompt on that same folder next iteration
+remember_dest_starting_loc = ''#used to store previous destination folder to reprompt on that same folder next iteration
+
+remember_source_starting_loc = r'Z:\Music_RT\01_Samples'
+remember_dest_starting_loc = r'Z:\Music_RT\12_Sorted_Samples'
 
 class Error(Exception):
-   """Base class for other exceptions"""
+   #Base class for other exceptions
    pass#Define Python user-defined exceptions. Required for custom exceptions
 
 def txt_to_dict(filepath):#Reads in all of the items from a text file into a list.
@@ -110,7 +111,7 @@ def dest_folder_setup(dest_path, dest_dict,company):#Appends the full file path 
 				logging.debug('Destination Folder for %s already exists.' % dest_dict[key][0])
 	return dest_dict
 
-def get_folder_name(message="Please select a folder: "):#Prompts the user to select a folder 
+def get_folder_name(message="Please select a folder: ", init_dir=''):#Prompts the user to select a folder 
 	class NoInput(Error):
 		#Raised if the user did not select a file when prompted.
 		pass
@@ -124,7 +125,7 @@ def get_folder_name(message="Please select a folder: "):#Prompts the user to sel
 	tries = range(1,(tries + 1))
 	for i in tries:
 		try:
-			user_input = filedialog.askdirectory(title=prompt_output)
+			user_input = filedialog.askdirectory(title=prompt_output, initialdir=init_dir)
 			prompt_output = message#resets the prompt back to the original message so that the retries can be added on
 			if user_input != None:#checks if what was returned was the None Value 
 				user_input = user_input.strip()#Removes any white spaces that might be input before checking for valid input
@@ -235,7 +236,7 @@ def get_yes_no_cancel(message="Yes, No, or Cancel? "):#Prompts the user for an a
 		logging.debug('User canceled program on prompt \"%s\" Exiting...' % message)
 		exit()
 
-def get_user_string_input(message="Input: ", custom_condition_list=[]):
+def get_user_string_input(message="Input: ", custom_condition_list=[], init_value=''):
 	class NoInput(Error):
 		#Raised if the user did not select a file when prompted.
 		pass
@@ -251,7 +252,7 @@ def get_user_string_input(message="Input: ", custom_condition_list=[]):
 	tries = range(1,(tries + 1))
 	for i in tries:
 		try:
-			user_input = simpledialog.askstring('Input', prompt_output)
+			user_input = simpledialog.askstring('Input', prompt_output,initialvalue=init_value)
 			prompt_output = message#resets the prompt back to the original message so that the retries can be added on
 
 			if user_input != None:#checks if what was returned was the None Value 
@@ -407,6 +408,7 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 			#bypassing delete
 			#distutils.dir_util.remove_tree(move[0])
 			#logging.debug('Folder "%s" has been deleted.'%(move[0]))
+
 		except distutils.errors.DistutilsFileError:
 			logging.debug('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
 			print('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
@@ -419,6 +421,8 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 			skipped_folders.append([move[0],move[1]])
 			continue
 		'''
+	files_bar.close()
+	folders_bar.close()
 
 def execute_file_moves(list_of_file_moves):#Actually performs the moves passed into the function
 	with tqdm(total = len(list_of_file_moves)) as pbar:
@@ -459,6 +463,8 @@ def count_files_and_folders(folder_path):#Takes in a folder path then counts all
 			file_count_bar.update(1)
 		folder_count_bar.update(1)
 		total_folders_counter += 1
+	file_count_bar.close()
+	folder_count_bar.close()
 	return [total_files_counter,total_folders_counter]
 	r'''
 	Description		Total Files		Total Folders 	
@@ -501,125 +507,129 @@ def get_rel_path(move=[]):
 	rel_path = os.path.relpath(move[0], move[1])
 	return rel_path
 
-source_folder = get_folder_name("Please select the source folder: ")
-destination_folder = get_folder_name("Please select the destination folder: ")
+continue_program = True#while this remains true the programm will continue to run and keep asking for more packs
+#Main loop
+while continue_program:
 
-#For when I am feeling lazy
-#source_folder = r'''C:\Users\s294422\Desktop\Test Folder\Source Folder'''
-#destination_folder = r'''C:\Users\s294422\Desktop\Test Folder\Destination Folder'''
+	source_folder = get_folder_name("Please select the source folder: ", remember_source_starting_loc)
+	destination_folder = get_folder_name("Please select the destination folder: ", remember_dest_starting_loc)
+	remember_source_starting_loc = source_folder
+	remember_dest_starting_loc = destination_folder
 
-#source_folder = r'''C:\Users\Bordo\Desktop\Test Folder\Source Folder'''
-#destination_folder = r'''C:\Users\Bordo\Desktop\Test Folder\Destination Folder'''
+	print("Source Folder: " + str(source_folder))
+	print("Destination Folder: " + str(destination_folder))
 
-print("Source Folder: " + str(source_folder))
-print("Destination Folder: " + str(destination_folder))
+	dest_dict = txt_to_dict(get_dest_folder_file())#Creates the dictionary that will be used to setup the sub folders within the defined destination folder
 
-dest_dict = txt_to_dict(get_dest_folder_file())#Creates the dictionary that will be used to setup the sub folders within the defined destination folder
-
-current_company = str(get_user_string_input("What company is this for?"))#Queries the user to determine what the company being sorted is 
-device_family = str(get_user_string_input("What device family is this for?"))#Queries the user to determine what the device family being sorted is 
-
-#For when I am feeling lazy
-#current_company = 'Cisco'
-#device_family = 'ASR'
+	current_company = str(get_user_string_input("What Sample Company is this for?", init_value=os.path.basename(os.path.dirname(source_folder))))#Queries the user to determine what the company being sorted is 
+	device_family = str(get_user_string_input("What is the name of the sample pack?", init_value=os.path.basename(source_folder)))#Queries the user to determine what the device family being sorted is 
 
 
-current_company = os.path.join(current_company, device_family)#joines together the device family and the company name.
-dest_dict = insert_key_folder_location(dest_dict, destination_folder, current_company)#insert all of the file paths for the destination folders into the destination dictionary. 
+	current_company = os.path.join(current_company, device_family)#joines together the device family and the company name.
+	dest_dict = insert_key_folder_location(dest_dict, destination_folder, current_company)#insert all of the file paths for the destination folders into the destination dictionary. 
 
-dest_folder_setup(destination_folder, dest_dict,current_company)#Creates the sub folders within the defined destination folder
-company_folder_setup(current_company, dest_dict)#Creates the company folder. 
+	dest_folder_setup(destination_folder, dest_dict,current_company)#Creates the sub folders within the defined destination folder
+	company_folder_setup(current_company, dest_dict)#Creates the company folder. 
 
-'''
-Moves consists of a list of lists. Each list will have 2 items in it. 1 will be the source folder and 1 will be the destination folder. Source Folder and Destination Folder are the original folders sorting through. 
-Description		Source 		destination 	Source Folder 	Destination Folder
-Index			0			1				2				3
-'''
+	'''
+	File_Moves and folder_moves consists of a list of lists. Each list will have 2 items in it. 1 will be the source folder and 1 will be the destination folder. Source Folder and Destination Folder are the original folders sorting through. 
+	Description		Source 		destination 	Source Folder 	Destination Folder
+	Index			0			1				2				3
+	'''
+	for root, folders, files in os.walk(source_folder):
+		#Searches through all of the folders 
+		for key in dest_dict:
+			with tqdm(total = len(dest_dict[key][1]), desc=key) as pbar1:
+				for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
+					tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
+					local_matches = list(filter(tag_regex.match, folders))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
+					for match in local_matches:#Iterates through the filter object which contains all matches from the filter
+						match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
+						dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company, match))#Creates the full path of the matched file
+						logging.debug('A match was made on %s' % (match_path))
+						folder_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
+						folders.remove(match)#removes the match from the files list so that it isn't matched more than once.
+					pbar1.update(1)
+		for folder in folders:#this will search through any file left in the files list and add it as a unmatched file. 
+			logging.debug('NO MATCH WAS MADE ON %s' % (folder))
+			unmatched_folders.append(folder)
 
-for root, folders, files in os.walk(source_folder):
-	#Searches through all of the folders 
-
-	for key in dest_dict:
-		with tqdm(total = len(dest_dict[key][1]), desc=key) as pbar1:
+		#Searches through all of the files 
+		for key in dest_dict:
 			for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
 				tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
-				local_matches = list(filter(tag_regex.match, folders))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
+				local_matches = list(filter(tag_regex.match, files))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
 				for match in local_matches:#Iterates through the filter object which contains all matches from the filter
 					match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
-					dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company, match))#Creates the full path of the matched file
+					dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company))#Creates the full path of the matched file
 					logging.debug('A match was made on %s' % (match_path))
-					folder_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
-					folders.remove(match)#removes the match from the files list so that it isn't matched more than once.
-				pbar1.update(1)
-	for folder in folders:#this will search through any file left in the files list and add it as a unmatched file. 
-		logging.debug('NO MATCH WAS MADE ON %s' % (folder))
-		unmatched_folders.append(folder)
+					file_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
+					files.remove(match)#removes the match from the files list so that it isn't matched more than once.
+		for file in files:#this will search through any file left in the files list and add it as a unmatched file. 
+			logging.debug('NO MATCH WAS MADE ON %s' % (file))
+			unmatched_files.append(file)
 
-	#Searches through all of the files 
-	for key in dest_dict:
-		for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
-			tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
-			local_matches = list(filter(tag_regex.match, files))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
-			for match in local_matches:#Iterates through the filter object which contains all matches from the filter
-				match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
-				dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company))#Creates the full path of the matched file
-				logging.debug('A match was made on %s' % (match_path))
-				file_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
-				files.remove(match)#removes the match from the files list so that it isn't matched more than once.
-	for file in files:#this will search through any file left in the files list and add it as a unmatched file. 
-		logging.debug('NO MATCH WAS MADE ON %s' % (file))
-		unmatched_files.append(file)
+	'''
+	Moves consists of a list of lists. Each list will have 2 items in it. 1 will be the source folder and 1 will be the destination folder. Source Folder and Destination Folder are the original folders sorting through.
+	Description		Source 		destination 	Source Folder 	Destination Folder
+	Index			0			1				2				3
+	'''
+	#prints file moves
 
-'''
-Moves consists of a list of lists. Each list will have 2 items in it. 1 will be the source folder and 1 will be the destination folder. Source Folder and Destination Folder are the original folders sorting through.
-Description		Source 		destination 	Source Folder 	Destination Folder
-Index			0			1				2				3
-'''
-#prints file moves
+	summarize_folder_moves(folder_moves)
+	summarize_files_moves(file_moves)
+	summarize_unmoved_folders(unmatched_folders)
+	summarize_unmoved_files(unmatched_files)
 
-summarize_folder_moves(folder_moves)
-summarize_files_moves(file_moves)
-summarize_unmoved_folders(unmatched_folders)
-summarize_unmoved_files(unmatched_files)
+	prompt_user = True# While this value is true the program will continue to prompt the user for input.
+	#Execute moves
 
-prompt_user = True# While this value is true the program will continue to prompt the user for input.
-#Execute moves
+	while prompt_user:
+		prompt_user = get_yes_no_cancel('Would you like to proceed with the moves?')
+		if prompt_user:
+			logging.debug('Executing moves!')
+			execute_folder_moves(folder_moves)
+			execute_file_moves(file_moves)
+			print('File moves have completed.\n\n\n')
+			summarize_unmoved_folders(unmatched_folders)
+			summarize_unmoved_files(unmatched_files)
+			prompt_user = False
+		elif prompt_user == False:
+			logging.debug('Not executing moves')
+			continue
+		else:
+			logging.debug('User chose not to execute the moves. Exiting...')
+			prompt_user = False
+			exit()
 
-while prompt_user:
+	
 
-	if get_yes_no_cancel('Would you like to proceed with the moves?'):
-		logging.debug('Executing moves!')
-		execute_folder_moves(folder_moves)
-		execute_file_moves(file_moves)
-		prompt_user = False
+	'''
+	prompt_user = True# While this value is true the program will continue to prompt the user for input.
+	#Execute moves
+	while prompt_user:
 
-	else:
-		logging.debug('User chose not to execute the moves. Exiting...')
-		prompt_user = False
-		exit()
+		if get_yes_no_cancel('Would you like to roll back?'):
+			logging.debug('ROLLING BACK!')
+			roll_back_moves(folder_moves, file_moves)
+			prompt_user = False
 
-print('File moves have completed.\n\n\n')
+		else:
+			logging.debug('User chose NOT to roll back moves. Exiting...')
+			prompt_user = False
+			exit()
 
-summarize_unmoved_folders(unmatched_folders)
-summarize_unmoved_files(unmatched_files)
+	summarize_folder_moves(folder_moves)
+	summarize_files_moves(file_moves)
+	print('File have been moved back to their original location.')
+	'''
 
-'''
-prompt_user = True# While this value is true the program will continue to prompt the user for input.
-#Execute moves
-while prompt_user:
-
-	if get_yes_no_cancel('Would you like to roll back?'):
-		logging.debug('ROLLING BACK!')
-		roll_back_moves(folder_moves, file_moves)
-		prompt_user = False
-
-	else:
-		logging.debug('User chose NOT to roll back moves. Exiting...')
-		prompt_user = False
-		exit()
-
-summarize_folder_moves(folder_moves)
-summarize_files_moves(file_moves)
-print('File have been moved back to their original location.')
-'''
+	continue_program = messagebox.askyesno('', 'Would you like to sort another pack?')
+	#clear out contents of lists before moving to next iteration of the moves.
+	file_moves = []#Will hold all of the sources and destination paths of files to be moved. 
+	folder_moves = []#Will hold all of the sources and destination paths of folders to be moved. 
+	unmatched_files = []#will holld all the files that did not match anything
+	unmatched_folders = []#Will hold all the folders that did not match anything
+	skipped_files = []#Tracks the files that were skipped because they already existsed
+	skipped_folders = []#Tracks the files that were skipped because they already existsed
 print('Exiting...')
