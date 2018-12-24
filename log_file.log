@@ -18023,3 +18023,956 @@
 2018-12-23 21:42:17,478 - DEBUG - No files to move. Skipping move files summary.
 2018-12-23 21:42:49,179 - DEBUG - Answered False to Would you like to proceed with the moves?
 2018-12-23 21:42:49,179 - DEBUG - Not executing moves
+2018-12-24 09:36:09,107 - DEBUG - User selected Folder Z:/Music_RT/01_Samples/Black Octopus/Black Octopus Sound - Downtempo Delights/Black Octopus Sound - Downtempo Delights
+2018-12-24 09:36:10,701 - DEBUG - User selected Folder Z:/Music_RT/12_Sorted_Samples
+2018-12-24 09:36:15,933 - DEBUG - User input: Black Octopus
+2018-12-24 09:36:18,700 - DEBUG - User input: Downtempo Delights
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas to dictionary
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Drums to dictionary
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Foley & Atmo to dictionary
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\FX to dictionary
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Synths & Insts to dictionary
+2018-12-24 09:36:18,700 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Vocal to dictionary
+2018-12-24 09:36:18,701 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Midi to dictionary
+2018-12-24 09:36:18,701 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Learning Resources to dictionary
+2018-12-24 09:36:18,704 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Foley & Atmo\Black Octopus\Downtempo Delights
+2018-12-24 09:36:18,706 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Vocal\Black Octopus\Downtempo Delights
+2018-12-24 09:36:18,707 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Midi\Black Octopus\Downtempo Delights
+2018-12-24 09:36:18,708 - DEBUG - All required Folders exist
+2018-12-24 09:36:18,713 - DEBUG - Searching for License and Read me Files
+2018-12-24 09:36:18,713 - DEBUG - License or Read me File found LICENSE_README.docx
+2018-12-24 09:36:18,715 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Musical Loops
+2018-12-24 09:36:18,716 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Songstarters
+2018-12-24 09:36:18,719 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Hits
+2018-12-24 09:36:18,719 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Loops
+2018-12-24 09:36:18,720 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Percussion Loops
+2018-12-24 09:36:18,728 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\FX Risers
+2018-12-24 09:36:18,731 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Synth Hits
+2018-12-24 09:36:18,732 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Loops
+2018-12-24 09:36:18,732 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Hits
+2018-12-24 09:36:18,741 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Videos
+2018-12-24 09:36:18,741 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3
+2018-12-24 09:36:18,742 - DEBUG - NO MATCH WAS MADE ON Black Octopus Sound - Downtempo Delights (main demo).mp3
+2018-12-24 09:36:18,742 - DEBUG - NO MATCH WAS MADE ON Downtempo Delights - Main Cover.jpg
+2018-12-24 09:36:18,744 - DEBUG - No unmoved folders to list. Skipping unmoved folder summary.
+2018-12-24 09:36:21,447 - DEBUG - Answered True to Would you like to proceed with the moves?
+2018-12-24 09:36:21,447 - DEBUG - Executing moves!
+2018-12-24 09:36:21,622 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:21,623 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Musical Loops
+2018-12-24 09:36:21,631 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops ALREADY EXISTS.
+2018-12-24 09:36:21,632 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Acoustic Loops
+2018-12-24 09:36:21,634 - DEBUG - File DD_Acousticloop_100_01_Fm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,634 - DEBUG - File DD_Acousticloop_100_02_G#m.wav ALREADY EXISTS.
+2018-12-24 09:36:21,636 - DEBUG - File DD_Acousticloop_100_03_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,637 - DEBUG - File DD_Acousticloop_100_04_G#m.wav ALREADY EXISTS.
+2018-12-24 09:36:21,639 - DEBUG - File DD_Acousticloop_100_05_G#m.wav ALREADY EXISTS.
+2018-12-24 09:36:21,640 - DEBUG - File DD_Acousticloop_100_06_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,642 - DEBUG - File DD_Acousticloop_100_07_Cm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,643 - DEBUG - File DD_Acousticloop_100_08_Em.wav ALREADY EXISTS.
+2018-12-24 09:36:21,644 - DEBUG - File DD_Acousticloop_100_09_Cm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,645 - DEBUG - File DD_Acousticloop_100_10_Gm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,647 - DEBUG - File DD_Acousticloop_100_11_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,648 - DEBUG - File DD_Acousticloop_100_12_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,649 - DEBUG - File DD_Acousticloop_100_13_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,651 - DEBUG - File DD_Acousticloop_100_14_Fm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,653 - DEBUG - File DD_Acousticloop_100_15_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,654 - DEBUG - File DD_Acousticloop_100_16_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,655 - DEBUG - File DD_Acousticloop_100_17_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,657 - DEBUG - File DD_Acousticloop_100_18_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,658 - DEBUG - File DD_Acousticloop_100_19_G.wav ALREADY EXISTS.
+2018-12-24 09:36:21,660 - DEBUG - File DD_Acousticloop_100_20_G.wav ALREADY EXISTS.
+2018-12-24 09:36:21,661 - DEBUG - File DD_Acousticloop_100_21_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,663 - DEBUG - File DD_Acousticloop_100_22_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,664 - DEBUG - File DD_Acousticloop_100_23_A.wav ALREADY EXISTS.
+2018-12-24 09:36:21,666 - DEBUG - File DD_Acousticloop_100_24_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,667 - DEBUG - File DD_Acousticloop_100_25_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,674 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops ALREADY EXISTS.
+2018-12-24 09:36:21,675 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Electronic Loops
+2018-12-24 09:36:21,677 - DEBUG - File DD_Electronicloop_100_01_Fm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,678 - DEBUG - File DD_Electronicloop_100_02_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,679 - DEBUG - File DD_Electronicloop_100_03_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,681 - DEBUG - File DD_Electronicloop_100_04_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,683 - DEBUG - File DD_Electronicloop_100_05_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,687 - DEBUG - File DD_Electronicloop_100_06_E.wav ALREADY EXISTS.
+2018-12-24 09:36:21,689 - DEBUG - File DD_Electronicloop_100_07_G.wav ALREADY EXISTS.
+2018-12-24 09:36:21,693 - DEBUG - File DD_Electronicloop_100_08_G.wav ALREADY EXISTS.
+2018-12-24 09:36:21,695 - DEBUG - File DD_Electronicloop_100_09_G.wav ALREADY EXISTS.
+2018-12-24 09:36:21,696 - DEBUG - File DD_Electronicloop_100_10_Em.wav ALREADY EXISTS.
+2018-12-24 09:36:21,698 - DEBUG - File DD_Electronicloop_100_11_Fm.wav ALREADY EXISTS.
+2018-12-24 09:36:21,701 - DEBUG - File DD_Electronicloop_100_12_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,702 - DEBUG - File DD_Electronicloop_100_13_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,704 - DEBUG - File DD_Electronicloop_100_14_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,705 - DEBUG - File DD_Electronicloop_100_15_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,707 - DEBUG - File DD_Electronicloop_100_16_F.wav ALREADY EXISTS.
+2018-12-24 09:36:21,708 - DEBUG - File DD_Electronicloop_100_17_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,709 - DEBUG - File DD_Electronicloop_100_18_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,710 - DEBUG - File DD_Electronicloop_100_19_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,712 - DEBUG - File DD_Electronicloop_100_20_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,713 - DEBUG - File DD_Electronicloop_100_21_E.wav ALREADY EXISTS.
+2018-12-24 09:36:21,714 - DEBUG - File DD_Electronicloop_100_22_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,716 - DEBUG - File DD_Electronicloop_100_23_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,718 - DEBUG - File DD_Electronicloop_100_24_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,721 - DEBUG - File DD_Electronicloop_100_25_F.wav ALREADY EXISTS.
+2018-12-24 09:36:21,722 - DEBUG - File DD_Electronicloop_100_26_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,724 - DEBUG - File DD_Electronicloop_100_27_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,725 - DEBUG - File DD_Electronicloop_100_28_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,727 - DEBUG - File DD_Electronicloop_100_29_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:21,727 - DEBUG - Folder: "Musical Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops" 
+2018-12-24 09:36:21,733 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:21,735 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarters
+2018-12-24 09:36:21,741 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:36:21,743 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter01
+2018-12-24 09:36:21,744 - DEBUG - File DD_SS01 Full_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,745 - DEBUG - File DD_SS01_Bass_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,747 - DEBUG - File DD_SS01_Chord Pad_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,748 - DEBUG - File DD_SS01_Drums_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,752 - DEBUG - File DD_SS01_Oooh_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,754 - DEBUG - File DD_SS01_Perc_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,755 - DEBUG - File DD_SS01_Piz Strings_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,756 - DEBUG - File DD_SS01_Rhodes_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,758 - DEBUG - File DD_SS01_Sus Strings_100_G#-01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,766 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:36:21,767 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter02
+2018-12-24 09:36:21,769 - DEBUG - File DD_SS02 Cymbal_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,770 - DEBUG - File DD_SS02 Drums 2_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,771 - DEBUG - File DD_SS02 Kick_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,773 - DEBUG - File DD_SS02 Perc_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,774 - DEBUG - File DD_SS02_Arp_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,775 - DEBUG - File DD_SS02_Bass_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,777 - DEBUG - File DD_SS02_Full_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,778 - DEBUG - File DD_SS02_FX_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,779 - DEBUG - File DD_SS02_Harp_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,781 - DEBUG - File DD_SS02_Rhodes_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,785 - DEBUG - File DD_SS02_Synth Hits_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,787 - DEBUG - File DD_SS02_Synth Rev_100_Am.wav ALREADY EXISTS.
+2018-12-24 09:36:21,793 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:36:21,794 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter03
+2018-12-24 09:36:21,796 - DEBUG - File DD_SS03_Bass_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,797 - DEBUG - File DD_SS03_Bells_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,799 - DEBUG - File DD_SS03_Claps_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,800 - DEBUG - File DD_SS03_Full_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,801 - DEBUG - File DD_SS03_Kick Hat_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,803 - DEBUG - File DD_SS03_Perc_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,804 - DEBUG - File DD_SS03_Rhodes_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,805 - DEBUG - File DD_SS03_Sax_100_C.wav ALREADY EXISTS.
+2018-12-24 09:36:21,805 - DEBUG - Folder: "Songstarters" Moved to "Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters" 
+2018-12-24 09:36:21,811 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:21,812 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Drum Hits
+2018-12-24 09:36:21,820 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:36:21,822 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Hats
+2018-12-24 09:36:21,823 - DEBUG - File DD_Hat_01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,825 - DEBUG - File DD_Hat_02.wav ALREADY EXISTS.
+2018-12-24 09:36:21,826 - DEBUG - File DD_Hat_03.wav ALREADY EXISTS.
+2018-12-24 09:36:21,828 - DEBUG - File DD_Hat_04.wav ALREADY EXISTS.
+2018-12-24 09:36:21,829 - DEBUG - File DD_Hat_05.wav ALREADY EXISTS.
+2018-12-24 09:36:21,830 - DEBUG - File DD_Hat_06.wav ALREADY EXISTS.
+2018-12-24 09:36:21,832 - DEBUG - File DD_Hat_07.wav ALREADY EXISTS.
+2018-12-24 09:36:21,833 - DEBUG - File DD_Hat_08.wav ALREADY EXISTS.
+2018-12-24 09:36:21,834 - DEBUG - File DD_Hat_09.wav ALREADY EXISTS.
+2018-12-24 09:36:21,836 - DEBUG - File DD_Hat_10.wav ALREADY EXISTS.
+2018-12-24 09:36:21,837 - DEBUG - File DD_Hat_11.wav ALREADY EXISTS.
+2018-12-24 09:36:21,838 - DEBUG - File DD_Hat_12.wav ALREADY EXISTS.
+2018-12-24 09:36:21,839 - DEBUG - File DD_Hat_13.wav ALREADY EXISTS.
+2018-12-24 09:36:21,841 - DEBUG - File DD_Hat_14.wav ALREADY EXISTS.
+2018-12-24 09:36:21,842 - DEBUG - File DD_Hat_15.wav ALREADY EXISTS.
+2018-12-24 09:36:21,843 - DEBUG - File DD_Hat_16.wav ALREADY EXISTS.
+2018-12-24 09:36:21,844 - DEBUG - File DD_Hat_17.wav ALREADY EXISTS.
+2018-12-24 09:36:21,846 - DEBUG - File DD_Hat_18.wav ALREADY EXISTS.
+2018-12-24 09:36:21,847 - DEBUG - File DD_Hat_19.wav ALREADY EXISTS.
+2018-12-24 09:36:21,848 - DEBUG - File DD_Hat_20.wav ALREADY EXISTS.
+2018-12-24 09:36:21,856 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:36:21,857 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Kicks
+2018-12-24 09:36:21,859 - DEBUG - File DD_Kick_01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,860 - DEBUG - File DD_Kick_02.wav ALREADY EXISTS.
+2018-12-24 09:36:21,862 - DEBUG - File DD_Kick_03.wav ALREADY EXISTS.
+2018-12-24 09:36:21,863 - DEBUG - File DD_Kick_04.wav ALREADY EXISTS.
+2018-12-24 09:36:21,865 - DEBUG - File DD_Kick_05.wav ALREADY EXISTS.
+2018-12-24 09:36:21,866 - DEBUG - File DD_Kick_06.wav ALREADY EXISTS.
+2018-12-24 09:36:21,867 - DEBUG - File DD_Kick_07.wav ALREADY EXISTS.
+2018-12-24 09:36:21,869 - DEBUG - File DD_Kick_08.wav ALREADY EXISTS.
+2018-12-24 09:36:21,870 - DEBUG - File DD_Kick_09.wav ALREADY EXISTS.
+2018-12-24 09:36:21,872 - DEBUG - File DD_Kick_10.wav ALREADY EXISTS.
+2018-12-24 09:36:21,873 - DEBUG - File DD_Kick_11.wav ALREADY EXISTS.
+2018-12-24 09:36:21,874 - DEBUG - File DD_Kick_12.wav ALREADY EXISTS.
+2018-12-24 09:36:21,875 - DEBUG - File DD_Kick_13.wav ALREADY EXISTS.
+2018-12-24 09:36:21,877 - DEBUG - File DD_Kick_14.wav ALREADY EXISTS.
+2018-12-24 09:36:21,878 - DEBUG - File DD_Kick_15.wav ALREADY EXISTS.
+2018-12-24 09:36:21,879 - DEBUG - File DD_Kick_16.wav ALREADY EXISTS.
+2018-12-24 09:36:21,881 - DEBUG - File DD_Kick_17.wav ALREADY EXISTS.
+2018-12-24 09:36:21,885 - DEBUG - File DD_Kick_18.wav ALREADY EXISTS.
+2018-12-24 09:36:21,887 - DEBUG - File DD_Kick_19.wav ALREADY EXISTS.
+2018-12-24 09:36:21,892 - DEBUG - File DD_Kick_20.wav ALREADY EXISTS.
+2018-12-24 09:36:21,898 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:36:21,900 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Perc
+2018-12-24 09:36:21,901 - DEBUG - File DD_FX_100_10.wav ALREADY EXISTS.
+2018-12-24 09:36:21,903 - DEBUG - File DD_Perc_01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,904 - DEBUG - File DD_Perc_02.wav ALREADY EXISTS.
+2018-12-24 09:36:21,905 - DEBUG - File DD_Perc_03.wav ALREADY EXISTS.
+2018-12-24 09:36:21,907 - DEBUG - File DD_Perc_04.wav ALREADY EXISTS.
+2018-12-24 09:36:21,908 - DEBUG - File DD_Perc_05.wav ALREADY EXISTS.
+2018-12-24 09:36:21,909 - DEBUG - File DD_Perc_06.wav ALREADY EXISTS.
+2018-12-24 09:36:21,911 - DEBUG - File DD_Perc_08.wav ALREADY EXISTS.
+2018-12-24 09:36:21,912 - DEBUG - File DD_Perc_09.wav ALREADY EXISTS.
+2018-12-24 09:36:21,913 - DEBUG - File DD_Perc_11.wav ALREADY EXISTS.
+2018-12-24 09:36:21,915 - DEBUG - File DD_Perc_12.wav ALREADY EXISTS.
+2018-12-24 09:36:21,916 - DEBUG - File DD_Perc_13.wav ALREADY EXISTS.
+2018-12-24 09:36:21,919 - DEBUG - File DD_Perc_14.wav ALREADY EXISTS.
+2018-12-24 09:36:21,921 - DEBUG - File DD_Perc_15.wav ALREADY EXISTS.
+2018-12-24 09:36:21,922 - DEBUG - File DD_Perc_16.wav ALREADY EXISTS.
+2018-12-24 09:36:21,924 - DEBUG - File DD_Perc_17.wav ALREADY EXISTS.
+2018-12-24 09:36:21,925 - DEBUG - File DD_Perc_18.wav ALREADY EXISTS.
+2018-12-24 09:36:21,927 - DEBUG - File DD_Perc_19.wav ALREADY EXISTS.
+2018-12-24 09:36:21,929 - DEBUG - File DD_Perc_20.wav ALREADY EXISTS.
+2018-12-24 09:36:21,935 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:36:21,937 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Snares
+2018-12-24 09:36:21,938 - DEBUG - File DD_Snare_01.wav ALREADY EXISTS.
+2018-12-24 09:36:21,940 - DEBUG - File DD_Snare_02.wav ALREADY EXISTS.
+2018-12-24 09:36:21,941 - DEBUG - File DD_Snare_03.wav ALREADY EXISTS.
+2018-12-24 09:36:21,942 - DEBUG - File DD_Snare_04.wav ALREADY EXISTS.
+2018-12-24 09:36:21,944 - DEBUG - File DD_Snare_05.wav ALREADY EXISTS.
+2018-12-24 09:36:21,945 - DEBUG - File DD_Snare_06.wav ALREADY EXISTS.
+2018-12-24 09:36:21,946 - DEBUG - File DD_Snare_07.wav ALREADY EXISTS.
+2018-12-24 09:36:21,948 - DEBUG - File DD_Snare_08.wav ALREADY EXISTS.
+2018-12-24 09:36:21,951 - DEBUG - File DD_Snare_09.wav ALREADY EXISTS.
+2018-12-24 09:36:21,953 - DEBUG - File DD_Snare_10.wav ALREADY EXISTS.
+2018-12-24 09:36:21,955 - DEBUG - File DD_Snare_11.wav ALREADY EXISTS.
+2018-12-24 09:36:21,956 - DEBUG - File DD_Snare_12.wav ALREADY EXISTS.
+2018-12-24 09:36:21,957 - DEBUG - File DD_Snare_13.wav ALREADY EXISTS.
+2018-12-24 09:36:21,959 - DEBUG - File DD_Snare_14.wav ALREADY EXISTS.
+2018-12-24 09:36:21,960 - DEBUG - File DD_Snare_15.wav ALREADY EXISTS.
+2018-12-24 09:36:21,962 - DEBUG - File DD_Snare_16.wav ALREADY EXISTS.
+2018-12-24 09:36:21,965 - DEBUG - File DD_Snare_17.wav ALREADY EXISTS.
+2018-12-24 09:36:21,966 - DEBUG - File DD_Snare_18.wav ALREADY EXISTS.
+2018-12-24 09:36:21,968 - DEBUG - File DD_Snare_19.wav ALREADY EXISTS.
+2018-12-24 09:36:21,969 - DEBUG - File DD_Snare_20.wav ALREADY EXISTS.
+2018-12-24 09:36:21,969 - DEBUG - Folder: "Drum Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits" 
+2018-12-24 09:36:21,975 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:21,976 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Drum Loops
+2018-12-24 09:36:21,978 - DEBUG - File DD_Drumloop_01_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,979 - DEBUG - File DD_Drumloop_01_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,980 - DEBUG - File DD_Drumloop_01_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,982 - DEBUG - File DD_Drumloop_01_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,983 - DEBUG - File DD_Drumloop_01_Top_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,985 - DEBUG - File DD_Drumloop_02_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,987 - DEBUG - File DD_Drumloop_02_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,989 - DEBUG - File DD_Drumloop_02_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,991 - DEBUG - File DD_Drumloop_02_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,993 - DEBUG - File DD_Drumloop_02_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,994 - DEBUG - File DD_Drumloop_03_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,996 - DEBUG - File DD_Drumloop_03_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,997 - DEBUG - File DD_Drumloop_03_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:21,999 - DEBUG - File DD_Drumloop_03_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,001 - DEBUG - File DD_Drumloop_03_Sub_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,002 - DEBUG - File DD_Drumloop_03_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,003 - DEBUG - File DD_Drumloop_04_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,005 - DEBUG - File DD_Drumloop_04_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,006 - DEBUG - File DD_Drumloop_04_Strpd 2_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,007 - DEBUG - File DD_Drumloop_04_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,008 - DEBUG - File DD_Drumloop_04_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,009 - DEBUG - File DD_Drumloop_05_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,010 - DEBUG - File DD_Drumloop_05_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,011 - DEBUG - File DD_Drumloop_05_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,012 - DEBUG - File DD_Drumloop_05_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,014 - DEBUG - File DD_Drumloop_06_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,019 - DEBUG - File DD_Drumloop_06_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,021 - DEBUG - File DD_Drumloop_06_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,022 - DEBUG - File DD_Drumloop_06_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,023 - DEBUG - File DD_Drumloop_06_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,025 - DEBUG - File DD_Drumloop_07_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,027 - DEBUG - File DD_Drumloop_07_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,028 - DEBUG - File DD_Drumloop_07_Perc 2_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,030 - DEBUG - File DD_Drumloop_07_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,031 - DEBUG - File DD_Drumloop_07_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,033 - DEBUG - File DD_Drumloop_07_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,034 - DEBUG - File DD_Drumloop_08_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,035 - DEBUG - File DD_Drumloop_08_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,036 - DEBUG - File DD_Drumloop_08_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,038 - DEBUG - File DD_Drumloop_08_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,039 - DEBUG - File DD_Drumloop_08_Top_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,040 - DEBUG - File DD_Drumloop_09_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,041 - DEBUG - File DD_Drumloop_09_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,043 - DEBUG - File DD_Drumloop_09_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,044 - DEBUG - File DD_Drumloop_09_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,046 - DEBUG - File DD_Drumloop_09_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,047 - DEBUG - File DD_Drumloop_10_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,048 - DEBUG - File DD_Drumloop_10_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,050 - DEBUG - File DD_Drumloop_10_Percussion_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,053 - DEBUG - File DD_Drumloop_10_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,055 - DEBUG - File DD_Drumloop_10_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,056 - DEBUG - File DD_Drumloop_11_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,057 - DEBUG - File DD_Drumloop_11_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,059 - DEBUG - File DD_Drumloop_11_Perc 2_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,060 - DEBUG - File DD_Drumloop_11_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,062 - DEBUG - File DD_Drumloop_11_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,063 - DEBUG - File DD_Drumloop_12_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,065 - DEBUG - File DD_Drumloop_12_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,067 - DEBUG - File DD_Drumloop_12_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,068 - DEBUG - File DD_Drumloop_12_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,069 - DEBUG - File DD_Drumloop_12_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,071 - DEBUG - File DD_Drumloop_13_Full 2_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,072 - DEBUG - File DD_Drumloop_13_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,074 - DEBUG - File DD_Drumloop_13_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,075 - DEBUG - File DD_Drumloop_13_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,076 - DEBUG - File DD_Drumloop_13_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,078 - DEBUG - File DD_Drumloop_14_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,079 - DEBUG - File DD_Drumloop_14_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,080 - DEBUG - File DD_Drumloop_14_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,085 - DEBUG - File DD_Drumloop_14_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,088 - DEBUG - File DD_Drumloop_14_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,089 - DEBUG - File DD_Drumloop_15_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,091 - DEBUG - File DD_Drumloop_15_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,092 - DEBUG - File DD_Drumloop_15_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,094 - DEBUG - File DD_Drumloop_15_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,095 - DEBUG - File DD_Drumloop_15_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,097 - DEBUG - File DD_Drumloop_16_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,098 - DEBUG - File DD_Drumloop_16_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,100 - DEBUG - File DD_Drumloop_16_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,101 - DEBUG - File DD_Drumloop_16_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,102 - DEBUG - File DD_Drumloop_16_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,104 - DEBUG - File DD_Drumloop_17_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,105 - DEBUG - File DD_Drumloop_17_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,107 - DEBUG - File DD_Drumloop_17_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,108 - DEBUG - File DD_Drumloop_17_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,110 - DEBUG - File DD_Drumloop_17_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,111 - DEBUG - File DD_Drumloop_17_Top_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,112 - DEBUG - File DD_Drumloop_18_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,114 - DEBUG - File DD_Drumloop_18_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,115 - DEBUG - File DD_Drumloop_18_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,117 - DEBUG - File DD_Drumloop_18_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,118 - DEBUG - File DD_Drumloop_18_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,120 - DEBUG - File DD_Drumloop_19_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,122 - DEBUG - File DD_Drumloop_19_kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,123 - DEBUG - File DD_Drumloop_19_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,124 - DEBUG - File DD_Drumloop_19_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,126 - DEBUG - File DD_Drumloop_19_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,127 - DEBUG - File DD_Drumloop_20_Full_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,129 - DEBUG - File DD_Drumloop_20_Kickfree_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,131 - DEBUG - File DD_Drumloop_20_Perc_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,133 - DEBUG - File DD_Drumloop_20_Strpd_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,134 - DEBUG - File DD_Drumloop_20_Toploop_100.wav ALREADY EXISTS.
+2018-12-24 09:36:22,135 - DEBUG - Folder: "Drum Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Loops" 
+2018-12-24 09:36:22,141 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,143 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Percussion Loops
+2018-12-24 09:36:22,144 - DEBUG - File DD_Percloop_100_01.wav ALREADY EXISTS.
+2018-12-24 09:36:22,145 - DEBUG - File DD_Percloop_100_02.wav ALREADY EXISTS.
+2018-12-24 09:36:22,147 - DEBUG - File DD_Percloop_100_03.wav ALREADY EXISTS.
+2018-12-24 09:36:22,148 - DEBUG - File DD_Percloop_100_04.wav ALREADY EXISTS.
+2018-12-24 09:36:22,149 - DEBUG - File DD_Percloop_100_05.wav ALREADY EXISTS.
+2018-12-24 09:36:22,151 - DEBUG - File DD_Percloop_100_06.wav ALREADY EXISTS.
+2018-12-24 09:36:22,157 - DEBUG - File DD_Percloop_100_07.wav ALREADY EXISTS.
+2018-12-24 09:36:22,159 - DEBUG - File DD_Percloop_100_08.wav ALREADY EXISTS.
+2018-12-24 09:36:22,160 - DEBUG - File DD_Percloop_100_09.wav ALREADY EXISTS.
+2018-12-24 09:36:22,162 - DEBUG - File DD_Percloop_100_10.wav ALREADY EXISTS.
+2018-12-24 09:36:22,163 - DEBUG - File DD_Percloop_100_11.wav ALREADY EXISTS.
+2018-12-24 09:36:22,165 - DEBUG - File DD_Percloop_100_12.wav ALREADY EXISTS.
+2018-12-24 09:36:22,166 - DEBUG - File DD_Percloop_100_13.wav ALREADY EXISTS.
+2018-12-24 09:36:22,168 - DEBUG - File DD_Percloop_100_14.wav ALREADY EXISTS.
+2018-12-24 09:36:22,169 - DEBUG - File DD_Percloop_100_15.wav ALREADY EXISTS.
+2018-12-24 09:36:22,170 - DEBUG - File DD_Percloop_100_16.wav ALREADY EXISTS.
+2018-12-24 09:36:22,172 - DEBUG - File DD_Percloop_100_17.wav ALREADY EXISTS.
+2018-12-24 09:36:22,173 - DEBUG - File DD_Percloop_100_18.wav ALREADY EXISTS.
+2018-12-24 09:36:22,175 - DEBUG - File DD_Percloop_100_19.wav ALREADY EXISTS.
+2018-12-24 09:36:22,176 - DEBUG - File DD_Percloop_100_20.wav ALREADY EXISTS.
+2018-12-24 09:36:22,178 - DEBUG - File DD_Percloop_100_21.wav ALREADY EXISTS.
+2018-12-24 09:36:22,179 - DEBUG - File DD_Percloop_100_22.wav ALREADY EXISTS.
+2018-12-24 09:36:22,181 - DEBUG - File DD_Percloop_100_23.wav ALREADY EXISTS.
+2018-12-24 09:36:22,185 - DEBUG - File DD_Percloop_100_24.wav ALREADY EXISTS.
+2018-12-24 09:36:22,188 - DEBUG - File DD_Percloop_100_25.wav ALREADY EXISTS.
+2018-12-24 09:36:22,190 - DEBUG - File DD_Percloop_100_26.wav ALREADY EXISTS.
+2018-12-24 09:36:22,191 - DEBUG - File DD_Percloop_100_27.wav ALREADY EXISTS.
+2018-12-24 09:36:22,192 - DEBUG - File DD_Percloop_100_28.wav ALREADY EXISTS.
+2018-12-24 09:36:22,194 - DEBUG - File DD_Percloop_100_29.wav ALREADY EXISTS.
+2018-12-24 09:36:22,196 - DEBUG - File DD_Percloop_100_30.wav ALREADY EXISTS.
+2018-12-24 09:36:22,197 - DEBUG - File DD_Percloop_100_31.wav ALREADY EXISTS.
+2018-12-24 09:36:22,199 - DEBUG - File DD_Percloop_100_32.wav ALREADY EXISTS.
+2018-12-24 09:36:22,202 - DEBUG - File DD_Percloop_100_33.wav ALREADY EXISTS.
+2018-12-24 09:36:22,203 - DEBUG - File DD_Percloop_100_34.wav ALREADY EXISTS.
+2018-12-24 09:36:22,205 - DEBUG - File DD_Percloop_100_35.wav ALREADY EXISTS.
+2018-12-24 09:36:22,206 - DEBUG - File DD_Percloop_100_36.wav ALREADY EXISTS.
+2018-12-24 09:36:22,208 - DEBUG - File DD_Percloop_100_37.wav ALREADY EXISTS.
+2018-12-24 09:36:22,209 - DEBUG - File DD_Percloop_100_38.wav ALREADY EXISTS.
+2018-12-24 09:36:22,211 - DEBUG - File DD_Percloop_100_39.wav ALREADY EXISTS.
+2018-12-24 09:36:22,212 - DEBUG - File DD_Percloop_100_40.wav ALREADY EXISTS.
+2018-12-24 09:36:22,213 - DEBUG - File DD_Percloop_100_41.wav ALREADY EXISTS.
+2018-12-24 09:36:22,215 - DEBUG - File DD_Percloop_100_42.wav ALREADY EXISTS.
+2018-12-24 09:36:22,216 - DEBUG - File DD_Percloop_100_43.wav ALREADY EXISTS.
+2018-12-24 09:36:22,219 - DEBUG - File DD_Percloop_100_44.wav ALREADY EXISTS.
+2018-12-24 09:36:22,220 - DEBUG - File DD_Percloop_100_45.wav ALREADY EXISTS.
+2018-12-24 09:36:22,221 - DEBUG - Folder: "Percussion Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Percussion Loops" 
+2018-12-24 09:36:22,232 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\FX\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,235 - DEBUG - LICENSE_README.docx ALREADY EXISTS in FX Risers
+2018-12-24 09:36:22,237 - DEBUG - File DD_FX_100_01_Fm.wav ALREADY EXISTS.
+2018-12-24 09:36:22,239 - DEBUG - File DD_FX_100_02_E.wav ALREADY EXISTS.
+2018-12-24 09:36:22,240 - DEBUG - File DD_FX_100_03_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,242 - DEBUG - File DD_FX_100_04_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,243 - DEBUG - File DD_FX_100_05_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,244 - DEBUG - File DD_FX_100_06.wav ALREADY EXISTS.
+2018-12-24 09:36:22,246 - DEBUG - File DD_FX_100_07.wav ALREADY EXISTS.
+2018-12-24 09:36:22,247 - DEBUG - File DD_FX_100_08.wav ALREADY EXISTS.
+2018-12-24 09:36:22,248 - DEBUG - File DD_FX_100_09.wav ALREADY EXISTS.
+2018-12-24 09:36:22,250 - DEBUG - File DD_FX_100_10.wav ALREADY EXISTS.
+2018-12-24 09:36:22,250 - DEBUG - Folder: "FX Risers" Moved to "Z:\Music_RT\12_Sorted_Samples\FX\Black Octopus\Downtempo Delights\FX Risers" 
+2018-12-24 09:36:22,259 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,261 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Synth Hits
+2018-12-24 09:36:22,262 - DEBUG - File DD_Synthhit_01_G.wav ALREADY EXISTS.
+2018-12-24 09:36:22,264 - DEBUG - File DD_Synthhit_02_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,265 - DEBUG - File DD_Synthhit_03_F#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,267 - DEBUG - File DD_Synthhit_04_E.wav ALREADY EXISTS.
+2018-12-24 09:36:22,269 - DEBUG - File DD_Synthhit_05_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,270 - DEBUG - File DD_Synthhit_06_F.wav ALREADY EXISTS.
+2018-12-24 09:36:22,272 - DEBUG - File DD_Synthhit_07_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,273 - DEBUG - File DD_Synthhit_08_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,275 - DEBUG - File DD_Synthhit_09_D.wav ALREADY EXISTS.
+2018-12-24 09:36:22,276 - DEBUG - File DD_Synthhit_10_D.wav ALREADY EXISTS.
+2018-12-24 09:36:22,276 - DEBUG - Folder: "Synth Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Synth Hits" 
+2018-12-24 09:36:22,282 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,283 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Bass Loops
+2018-12-24 09:36:22,285 - DEBUG - File DD_Bassloop_100_01_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,286 - DEBUG - File DD_Bassloop_100_02_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,288 - DEBUG - File DD_Bassloop_100_03_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,290 - DEBUG - File DD_Bassloop_100_03_G#.wav.zpa ALREADY EXISTS.
+2018-12-24 09:36:22,292 - DEBUG - File DD_Bassloop_100_04_F.wav ALREADY EXISTS.
+2018-12-24 09:36:22,293 - DEBUG - File DD_Bassloop_100_04_F.wav.zpa ALREADY EXISTS.
+2018-12-24 09:36:22,295 - DEBUG - File DD_Bassloop_100_05_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,296 - DEBUG - File DD_Bassloop_100_06_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,299 - DEBUG - File DD_Bassloop_100_07_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,301 - DEBUG - File DD_Bassloop_100_08_F.wav ALREADY EXISTS.
+2018-12-24 09:36:22,302 - DEBUG - File DD_Bassloop_100_09_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,303 - DEBUG - File DD_Bassloop_100_10_A#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,305 - DEBUG - File DD_Bassloop_100_11_F.wav ALREADY EXISTS.
+2018-12-24 09:36:22,306 - DEBUG - File DD_Bassloop_100_12_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,308 - DEBUG - File DD_Bassloop_100_13_B.wav ALREADY EXISTS.
+2018-12-24 09:36:22,309 - DEBUG - File DD_Bassloop_100_14_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,311 - DEBUG - File DD_Bassloop_100_15_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,312 - DEBUG - File DD_Bassloop_100_16_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,313 - DEBUG - File DD_Bassloop_100_17_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,315 - DEBUG - File DD_Bassloop_100_18_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,316 - DEBUG - File DD_Bassloop_100_19_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,318 - DEBUG - File DD_Bassloop_100_20_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,319 - DEBUG - File DD_Bassloop_100_21_G.wav ALREADY EXISTS.
+2018-12-24 09:36:22,321 - DEBUG - File DD_Bassloop_100_22_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,323 - DEBUG - File DD_Bassloop_100_23_D#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,324 - DEBUG - File DD_Bassloop_100_24_E.wav ALREADY EXISTS.
+2018-12-24 09:36:22,326 - DEBUG - File DD_Bassloop_100_25_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,327 - DEBUG - File DD_Bassloop_100_26_A.wav ALREADY EXISTS.
+2018-12-24 09:36:22,327 - DEBUG - Folder: "Bass Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Bass Loops" 
+2018-12-24 09:36:22,333 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,334 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Bass Hits
+2018-12-24 09:36:22,335 - DEBUG - File DD_Basshit_01_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,337 - DEBUG - File DD_Basshit_03_C#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,338 - DEBUG - File DD_Basshit_04_D.wav ALREADY EXISTS.
+2018-12-24 09:36:22,340 - DEBUG - File DD_Basshit_05_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,341 - DEBUG - File DD_Basshit_06_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,343 - DEBUG - File DD_Basshit_07_C.wav ALREADY EXISTS.
+2018-12-24 09:36:22,344 - DEBUG - File DD_Basshit_08_F.wav ALREADY EXISTS.
+2018-12-24 09:36:22,346 - DEBUG - File DD_Basshit_09_A.wav ALREADY EXISTS.
+2018-12-24 09:36:22,347 - DEBUG - File DD_Basshit_10_G.wav ALREADY EXISTS.
+2018-12-24 09:36:22,349 - DEBUG - File DD_Bassloop_100_03_G#.wav ALREADY EXISTS.
+2018-12-24 09:36:22,349 - DEBUG - Folder: "Bass Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Bass Hits" 
+2018-12-24 09:36:22,355 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Learning Resources\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:36:22,357 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Videos
+2018-12-24 09:36:22,359 - DEBUG - File Downtempo Delights 01.mov ALREADY EXISTS.
+2018-12-24 09:36:22,360 - DEBUG - File Downtempo Delights 02.mov ALREADY EXISTS.
+2018-12-24 09:36:22,361 - DEBUG - Folder: "Videos" Moved to "Z:\Music_RT\12_Sorted_Samples\Learning Resources\Black Octopus\Downtempo Delights\Videos" 
+2018-12-24 09:36:22,472 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Downtempo Delights
+2018-12-24 09:36:22,472 - DEBUG - Trying to move File "Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3" to Folder: Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3 
+2018-12-24 09:36:22,732 - DEBUG - File "Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3" has been moved.
+2018-12-24 09:36:22,733 - DEBUG - No unmoved folders to list. Skipping unmoved folder summary.
+2018-12-24 09:37:51,294 - DEBUG - User selected Folder Z:/Music_RT/01_Samples/Black Octopus/Black Octopus Sound - Downtempo Delights/Black Octopus Sound - Downtempo Delights
+2018-12-24 09:37:52,029 - DEBUG - User selected Folder Z:/Music_RT/12_Sorted_Samples
+2018-12-24 09:37:57,051 - DEBUG - User input: Black Octopus
+2018-12-24 09:38:05,462 - DEBUG - User input: Downtempo Delights
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Drums to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Foley & Atmo to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\FX to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Synths & Insts to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Vocal to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Midi to dictionary
+2018-12-24 09:38:05,463 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Learning Resources to dictionary
+2018-12-24 09:38:05,467 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Foley & Atmo\Black Octopus\Downtempo Delights
+2018-12-24 09:38:05,469 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Vocal\Black Octopus\Downtempo Delights
+2018-12-24 09:38:05,470 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Midi\Black Octopus\Downtempo Delights
+2018-12-24 09:38:05,472 - DEBUG - All required Folders exist
+2018-12-24 09:38:05,477 - DEBUG - Searching for License and Read me Files
+2018-12-24 09:38:05,478 - DEBUG - License or Read me File found LICENSE_README.docx
+2018-12-24 09:38:05,479 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Musical Loops
+2018-12-24 09:38:05,480 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Songstarters
+2018-12-24 09:38:05,482 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Hits
+2018-12-24 09:38:05,482 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Loops
+2018-12-24 09:38:05,483 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Percussion Loops
+2018-12-24 09:38:05,490 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\FX Risers
+2018-12-24 09:38:05,493 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Synth Hits
+2018-12-24 09:38:05,494 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Loops
+2018-12-24 09:38:05,494 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Hits
+2018-12-24 09:38:05,501 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Videos
+2018-12-24 09:38:05,502 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3
+2018-12-24 09:38:05,503 - DEBUG - NO MATCH WAS MADE ON Black Octopus Sound - Downtempo Delights (main demo).mp3
+2018-12-24 09:38:05,503 - DEBUG - NO MATCH WAS MADE ON Downtempo Delights - Main Cover.jpg
+2018-12-24 09:38:05,504 - DEBUG - No unmoved folders to list. Skipping unmoved folder summary.
+2018-12-24 09:38:07,223 - DEBUG - Answered True to Would you like to proceed with the moves?
+2018-12-24 09:38:07,223 - DEBUG - Executing moves!
+2018-12-24 09:38:07,391 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:38:07,393 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Musical Loops
+2018-12-24 09:38:07,399 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops ALREADY EXISTS.
+2018-12-24 09:38:07,400 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Acoustic Loops
+2018-12-24 09:38:30,185 - DEBUG - User selected Folder Z:/Music_RT/01_Samples/Black Octopus/Black Octopus Sound - Downtempo Delights/Black Octopus Sound - Downtempo Delights
+2018-12-24 09:38:31,232 - DEBUG - User selected Folder Z:/Music_RT/12_Sorted_Samples
+2018-12-24 09:38:31,767 - DEBUG - User input: Black Octopus Sound - Downtempo Delights
+2018-12-24 09:38:35,800 - DEBUG - User input: None
+2018-12-24 09:38:35,800 - DEBUG - User canceled program on prompt "What is the name of the sample pack?" Exiting...
+2018-12-24 09:38:43,654 - DEBUG - User selected Folder Z:/Music_RT/01_Samples/Black Octopus/Black Octopus Sound - Downtempo Delights/Black Octopus Sound - Downtempo Delights
+2018-12-24 09:38:45,716 - DEBUG - User selected Folder Z:/Music_RT/12_Sorted_Samples
+2018-12-24 09:38:49,720 - DEBUG - User input: Black Octopus
+2018-12-24 09:38:53,855 - DEBUG - User input: Downtempo Delights
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Drums to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Foley & Atmo to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\FX to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Synths & Insts to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Vocal to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Midi to dictionary
+2018-12-24 09:38:53,855 - DEBUG - Adding path Z:\Music_RT\12_Sorted_Samples\Learning Resources to dictionary
+2018-12-24 09:38:53,862 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Foley & Atmo\Black Octopus\Downtempo Delights
+2018-12-24 09:38:53,865 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Vocal\Black Octopus\Downtempo Delights
+2018-12-24 09:38:53,866 - DEBUG - Creating Folder at Z:\Music_RT\12_Sorted_Samples\Midi\Black Octopus\Downtempo Delights
+2018-12-24 09:38:53,867 - DEBUG - All required Folders exist
+2018-12-24 09:38:53,877 - DEBUG - Searching for License and Read me Files
+2018-12-24 09:38:53,877 - DEBUG - License or Read me File found LICENSE_README.docx
+2018-12-24 09:38:53,879 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Musical Loops
+2018-12-24 09:38:53,879 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Songstarters
+2018-12-24 09:38:53,881 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Hits
+2018-12-24 09:38:53,881 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Drum Loops
+2018-12-24 09:38:53,882 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Percussion Loops
+2018-12-24 09:38:53,887 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\FX Risers
+2018-12-24 09:38:53,890 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Synth Hits
+2018-12-24 09:38:53,891 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Loops
+2018-12-24 09:38:53,892 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Bass Hits
+2018-12-24 09:38:53,901 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Videos
+2018-12-24 09:38:53,902 - DEBUG - A match was made on Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3
+2018-12-24 09:38:53,903 - DEBUG - NO MATCH WAS MADE ON Black Octopus Sound - Downtempo Delights (main demo).mp3
+2018-12-24 09:38:53,903 - DEBUG - NO MATCH WAS MADE ON Downtempo Delights - Main Cover.jpg
+2018-12-24 09:38:53,905 - DEBUG - No unmoved folders to list. Skipping unmoved folder summary.
+2018-12-24 09:38:56,033 - DEBUG - Answered True to Would you like to proceed with the moves?
+2018-12-24 09:38:56,034 - DEBUG - Executing moves!
+2018-12-24 09:38:56,195 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:38:56,196 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Musical Loops
+2018-12-24 09:38:56,202 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops ALREADY EXISTS.
+2018-12-24 09:38:56,203 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Acoustic Loops
+2018-12-24 09:38:56,545 - DEBUG - File  was copied.
+2018-12-24 09:38:56,852 - DEBUG - File  was copied.
+2018-12-24 09:38:57,004 - DEBUG - File  was copied.
+2018-12-24 09:38:57,298 - DEBUG - File  was copied.
+2018-12-24 09:38:57,589 - DEBUG - File  was copied.
+2018-12-24 09:38:57,751 - DEBUG - File  was copied.
+2018-12-24 09:38:57,902 - DEBUG - File  was copied.
+2018-12-24 09:38:58,064 - DEBUG - File  was copied.
+2018-12-24 09:38:58,220 - DEBUG - File  was copied.
+2018-12-24 09:38:58,389 - DEBUG - File  was copied.
+2018-12-24 09:38:58,567 - DEBUG - File  was copied.
+2018-12-24 09:38:58,865 - DEBUG - File  was copied.
+2018-12-24 09:38:59,013 - DEBUG - File  was copied.
+2018-12-24 09:38:59,159 - DEBUG - File  was copied.
+2018-12-24 09:38:59,460 - DEBUG - File  was copied.
+2018-12-24 09:38:59,605 - DEBUG - File  was copied.
+2018-12-24 09:38:59,783 - DEBUG - File  was copied.
+2018-12-24 09:38:59,930 - DEBUG - File  was copied.
+2018-12-24 09:39:00,485 - DEBUG - File  was copied.
+2018-12-24 09:39:00,798 - DEBUG - File  was copied.
+2018-12-24 09:39:00,940 - DEBUG - File  was copied.
+2018-12-24 09:39:01,242 - DEBUG - File  was copied.
+2018-12-24 09:39:01,521 - DEBUG - File  was copied.
+2018-12-24 09:39:01,801 - DEBUG - File  was copied.
+2018-12-24 09:39:01,952 - DEBUG - File  was copied.
+2018-12-24 09:39:01,960 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops ALREADY EXISTS.
+2018-12-24 09:39:01,962 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Electronic Loops
+2018-12-24 09:39:02,269 - DEBUG - File  was copied.
+2018-12-24 09:39:02,534 - DEBUG - File  was copied.
+2018-12-24 09:39:02,711 - DEBUG - File  was copied.
+2018-12-24 09:39:02,886 - DEBUG - File  was copied.
+2018-12-24 09:39:03,043 - DEBUG - File  was copied.
+2018-12-24 09:39:03,564 - DEBUG - File  was copied.
+2018-12-24 09:39:03,846 - DEBUG - File  was copied.
+2018-12-24 09:39:04,061 - DEBUG - File  was copied.
+2018-12-24 09:39:04,219 - DEBUG - File  was copied.
+2018-12-24 09:39:04,370 - DEBUG - File  was copied.
+2018-12-24 09:39:04,521 - DEBUG - File  was copied.
+2018-12-24 09:39:04,830 - DEBUG - File  was copied.
+2018-12-24 09:39:05,129 - DEBUG - File  was copied.
+2018-12-24 09:39:05,276 - DEBUG - File  was copied.
+2018-12-24 09:39:05,599 - DEBUG - File  was copied.
+2018-12-24 09:39:05,754 - DEBUG - File  was copied.
+2018-12-24 09:39:05,918 - DEBUG - File  was copied.
+2018-12-24 09:39:06,079 - DEBUG - File  was copied.
+2018-12-24 09:39:06,361 - DEBUG - File  was copied.
+2018-12-24 09:39:06,517 - DEBUG - File  was copied.
+2018-12-24 09:39:06,684 - DEBUG - File  was copied.
+2018-12-24 09:39:06,861 - DEBUG - File  was copied.
+2018-12-24 09:39:07,033 - DEBUG - File  was copied.
+2018-12-24 09:39:07,325 - DEBUG - File  was copied.
+2018-12-24 09:39:07,610 - DEBUG - File  was copied.
+2018-12-24 09:39:07,765 - DEBUG - File  was copied.
+2018-12-24 09:39:07,934 - DEBUG - File  was copied.
+2018-12-24 09:39:08,253 - DEBUG - File  was copied.
+2018-12-24 09:39:08,409 - DEBUG - File  was copied.
+2018-12-24 09:39:08,410 - DEBUG - Folder: "Musical Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Musical Loops" 
+2018-12-24 09:39:08,417 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:39:08,418 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarters
+2018-12-24 09:39:08,428 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:39:08,430 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter01
+2018-12-24 09:39:09,973 - DEBUG - File  was copied.
+2018-12-24 09:39:11,560 - DEBUG - File  was copied.
+2018-12-24 09:39:13,150 - DEBUG - File  was copied.
+2018-12-24 09:39:14,689 - DEBUG - File  was copied.
+2018-12-24 09:39:16,257 - DEBUG - File  was copied.
+2018-12-24 09:39:17,784 - DEBUG - File  was copied.
+2018-12-24 09:39:19,323 - DEBUG - File  was copied.
+2018-12-24 09:39:20,834 - DEBUG - File  was copied.
+2018-12-24 09:39:22,336 - DEBUG - File  was copied.
+2018-12-24 09:39:22,348 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:39:22,350 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter02
+2018-12-24 09:39:23,924 - DEBUG - File  was copied.
+2018-12-24 09:39:25,507 - DEBUG - File  was copied.
+2018-12-24 09:39:27,048 - DEBUG - File  was copied.
+2018-12-24 09:39:28,644 - DEBUG - File  was copied.
+2018-12-24 09:39:30,247 - DEBUG - File  was copied.
+2018-12-24 09:39:31,781 - DEBUG - File  was copied.
+2018-12-24 09:39:33,339 - DEBUG - File  was copied.
+2018-12-24 09:39:34,957 - DEBUG - File  was copied.
+2018-12-24 09:39:36,511 - DEBUG - File  was copied.
+2018-12-24 09:39:38,075 - DEBUG - File  was copied.
+2018-12-24 09:39:39,606 - DEBUG - File  was copied.
+2018-12-24 09:39:41,194 - DEBUG - File  was copied.
+2018-12-24 09:39:41,204 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters ALREADY EXISTS.
+2018-12-24 09:39:41,206 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Songstarter03
+2018-12-24 09:39:42,421 - DEBUG - File  was copied.
+2018-12-24 09:39:43,616 - DEBUG - File  was copied.
+2018-12-24 09:39:44,838 - DEBUG - File  was copied.
+2018-12-24 09:39:46,018 - DEBUG - File  was copied.
+2018-12-24 09:39:47,170 - DEBUG - File  was copied.
+2018-12-24 09:39:48,421 - DEBUG - File  was copied.
+2018-12-24 09:39:49,802 - DEBUG - File  was copied.
+2018-12-24 09:39:51,061 - DEBUG - File  was copied.
+2018-12-24 09:39:51,062 - DEBUG - Folder: "Songstarters" Moved to "Z:\Music_RT\12_Sorted_Samples\Construction Kits & ideas\Black Octopus\Downtempo Delights\Songstarters" 
+2018-12-24 09:39:51,074 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:39:51,075 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Drum Hits
+2018-12-24 09:39:51,086 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:39:51,087 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Hats
+2018-12-24 09:39:51,112 - DEBUG - File  was copied.
+2018-12-24 09:39:51,139 - DEBUG - File  was copied.
+2018-12-24 09:39:51,166 - DEBUG - File  was copied.
+2018-12-24 09:39:51,186 - DEBUG - File  was copied.
+2018-12-24 09:39:51,207 - DEBUG - File  was copied.
+2018-12-24 09:39:51,235 - DEBUG - File  was copied.
+2018-12-24 09:39:51,256 - DEBUG - File  was copied.
+2018-12-24 09:39:51,279 - DEBUG - File  was copied.
+2018-12-24 09:39:51,302 - DEBUG - File  was copied.
+2018-12-24 09:39:51,326 - DEBUG - File  was copied.
+2018-12-24 09:39:51,346 - DEBUG - File  was copied.
+2018-12-24 09:39:51,369 - DEBUG - File  was copied.
+2018-12-24 09:39:51,392 - DEBUG - File  was copied.
+2018-12-24 09:39:51,415 - DEBUG - File  was copied.
+2018-12-24 09:39:51,438 - DEBUG - File  was copied.
+2018-12-24 09:39:51,460 - DEBUG - File  was copied.
+2018-12-24 09:39:51,481 - DEBUG - File  was copied.
+2018-12-24 09:39:51,500 - DEBUG - File  was copied.
+2018-12-24 09:39:51,519 - DEBUG - File  was copied.
+2018-12-24 09:39:51,546 - DEBUG - File  was copied.
+2018-12-24 09:39:51,556 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:39:51,558 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Kicks
+2018-12-24 09:39:51,588 - DEBUG - File  was copied.
+2018-12-24 09:39:51,611 - DEBUG - File  was copied.
+2018-12-24 09:39:51,634 - DEBUG - File  was copied.
+2018-12-24 09:39:51,655 - DEBUG - File  was copied.
+2018-12-24 09:39:51,678 - DEBUG - File  was copied.
+2018-12-24 09:39:51,699 - DEBUG - File  was copied.
+2018-12-24 09:39:51,724 - DEBUG - File  was copied.
+2018-12-24 09:39:51,749 - DEBUG - File  was copied.
+2018-12-24 09:39:51,772 - DEBUG - File  was copied.
+2018-12-24 09:39:51,787 - DEBUG - File  was copied.
+2018-12-24 09:39:51,813 - DEBUG - File  was copied.
+2018-12-24 09:39:51,837 - DEBUG - File  was copied.
+2018-12-24 09:39:51,870 - DEBUG - File  was copied.
+2018-12-24 09:39:51,890 - DEBUG - File  was copied.
+2018-12-24 09:39:51,935 - DEBUG - File  was copied.
+2018-12-24 09:39:51,958 - DEBUG - File  was copied.
+2018-12-24 09:39:51,981 - DEBUG - File  was copied.
+2018-12-24 09:39:52,014 - DEBUG - File  was copied.
+2018-12-24 09:39:52,036 - DEBUG - File  was copied.
+2018-12-24 09:39:52,058 - DEBUG - File  was copied.
+2018-12-24 09:39:52,070 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:39:52,072 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Perc
+2018-12-24 09:39:52,202 - DEBUG - File  was copied.
+2018-12-24 09:39:52,250 - DEBUG - File  was copied.
+2018-12-24 09:39:52,322 - DEBUG - File  was copied.
+2018-12-24 09:39:52,383 - DEBUG - File  was copied.
+2018-12-24 09:39:52,435 - DEBUG - File  was copied.
+2018-12-24 09:39:52,473 - DEBUG - File  was copied.
+2018-12-24 09:39:52,512 - DEBUG - File  was copied.
+2018-12-24 09:39:52,550 - DEBUG - File  was copied.
+2018-12-24 09:39:52,586 - DEBUG - File  was copied.
+2018-12-24 09:39:52,627 - DEBUG - File  was copied.
+2018-12-24 09:39:52,665 - DEBUG - File  was copied.
+2018-12-24 09:39:52,713 - DEBUG - File  was copied.
+2018-12-24 09:39:52,750 - DEBUG - File  was copied.
+2018-12-24 09:39:52,796 - DEBUG - File  was copied.
+2018-12-24 09:39:52,832 - DEBUG - File  was copied.
+2018-12-24 09:39:52,867 - DEBUG - File  was copied.
+2018-12-24 09:39:52,905 - DEBUG - File  was copied.
+2018-12-24 09:39:52,940 - DEBUG - File  was copied.
+2018-12-24 09:39:52,974 - DEBUG - File  was copied.
+2018-12-24 09:39:52,983 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits ALREADY EXISTS.
+2018-12-24 09:39:52,985 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Snares
+2018-12-24 09:39:53,009 - DEBUG - File  was copied.
+2018-12-24 09:39:53,090 - DEBUG - File  was copied.
+2018-12-24 09:39:53,116 - DEBUG - File  was copied.
+2018-12-24 09:39:53,142 - DEBUG - File  was copied.
+2018-12-24 09:39:53,167 - DEBUG - File  was copied.
+2018-12-24 09:39:53,198 - DEBUG - File  was copied.
+2018-12-24 09:39:53,219 - DEBUG - File  was copied.
+2018-12-24 09:39:53,240 - DEBUG - File  was copied.
+2018-12-24 09:39:53,262 - DEBUG - File  was copied.
+2018-12-24 09:39:53,287 - DEBUG - File  was copied.
+2018-12-24 09:39:53,311 - DEBUG - File  was copied.
+2018-12-24 09:39:53,334 - DEBUG - File  was copied.
+2018-12-24 09:39:53,360 - DEBUG - File  was copied.
+2018-12-24 09:39:53,380 - DEBUG - File  was copied.
+2018-12-24 09:39:53,399 - DEBUG - File  was copied.
+2018-12-24 09:39:53,417 - DEBUG - File  was copied.
+2018-12-24 09:39:53,439 - DEBUG - File  was copied.
+2018-12-24 09:39:53,459 - DEBUG - File  was copied.
+2018-12-24 09:39:53,481 - DEBUG - File  was copied.
+2018-12-24 09:39:53,500 - DEBUG - File  was copied.
+2018-12-24 09:39:53,501 - DEBUG - Folder: "Drum Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Hits" 
+2018-12-24 09:39:53,515 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:39:53,516 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Drum Loops
+2018-12-24 09:39:53,601 - DEBUG - File  was copied.
+2018-12-24 09:39:53,698 - DEBUG - File  was copied.
+2018-12-24 09:39:53,784 - DEBUG - File  was copied.
+2018-12-24 09:39:53,880 - DEBUG - File  was copied.
+2018-12-24 09:39:53,966 - DEBUG - File  was copied.
+2018-12-24 09:39:54,055 - DEBUG - File  was copied.
+2018-12-24 09:39:54,157 - DEBUG - File  was copied.
+2018-12-24 09:39:54,242 - DEBUG - File  was copied.
+2018-12-24 09:39:54,325 - DEBUG - File  was copied.
+2018-12-24 09:39:54,419 - DEBUG - File  was copied.
+2018-12-24 09:39:54,506 - DEBUG - File  was copied.
+2018-12-24 09:39:54,607 - DEBUG - File  was copied.
+2018-12-24 09:39:54,693 - DEBUG - File  was copied.
+2018-12-24 09:39:54,776 - DEBUG - File  was copied.
+2018-12-24 09:39:54,874 - DEBUG - File  was copied.
+2018-12-24 09:39:54,953 - DEBUG - File  was copied.
+2018-12-24 09:39:55,040 - DEBUG - File  was copied.
+2018-12-24 09:39:55,135 - DEBUG - File  was copied.
+2018-12-24 09:39:55,213 - DEBUG - File  was copied.
+2018-12-24 09:39:55,297 - DEBUG - File  was copied.
+2018-12-24 09:39:55,392 - DEBUG - File  was copied.
+2018-12-24 09:39:55,486 - DEBUG - File  was copied.
+2018-12-24 09:39:55,595 - DEBUG - File  was copied.
+2018-12-24 09:39:55,674 - DEBUG - File  was copied.
+2018-12-24 09:39:55,755 - DEBUG - File  was copied.
+2018-12-24 09:39:55,841 - DEBUG - File  was copied.
+2018-12-24 09:39:55,922 - DEBUG - File  was copied.
+2018-12-24 09:39:56,009 - DEBUG - File  was copied.
+2018-12-24 09:39:56,121 - DEBUG - File  was copied.
+2018-12-24 09:39:56,238 - DEBUG - File  was copied.
+2018-12-24 09:39:56,321 - DEBUG - File  was copied.
+2018-12-24 09:39:56,399 - DEBUG - File  was copied.
+2018-12-24 09:39:56,477 - DEBUG - File  was copied.
+2018-12-24 09:39:56,563 - DEBUG - File  was copied.
+2018-12-24 09:39:56,647 - DEBUG - File  was copied.
+2018-12-24 09:39:56,754 - DEBUG - File  was copied.
+2018-12-24 09:39:56,856 - DEBUG - File  was copied.
+2018-12-24 09:39:56,938 - DEBUG - File  was copied.
+2018-12-24 09:39:57,045 - DEBUG - File  was copied.
+2018-12-24 09:39:57,368 - DEBUG - File  was copied.
+2018-12-24 09:39:57,450 - DEBUG - File  was copied.
+2018-12-24 09:39:57,536 - DEBUG - File  was copied.
+2018-12-24 09:39:57,637 - DEBUG - File  was copied.
+2018-12-24 09:39:57,725 - DEBUG - File  was copied.
+2018-12-24 09:39:57,808 - DEBUG - File  was copied.
+2018-12-24 09:39:57,911 - DEBUG - File  was copied.
+2018-12-24 09:39:57,999 - DEBUG - File  was copied.
+2018-12-24 09:39:58,088 - DEBUG - File  was copied.
+2018-12-24 09:39:58,182 - DEBUG - File  was copied.
+2018-12-24 09:39:58,305 - DEBUG - File  was copied.
+2018-12-24 09:39:58,402 - DEBUG - File  was copied.
+2018-12-24 09:39:58,496 - DEBUG - File  was copied.
+2018-12-24 09:39:58,578 - DEBUG - File  was copied.
+2018-12-24 09:39:58,682 - DEBUG - File  was copied.
+2018-12-24 09:39:58,784 - DEBUG - File  was copied.
+2018-12-24 09:39:58,883 - DEBUG - File  was copied.
+2018-12-24 09:39:58,987 - DEBUG - File  was copied.
+2018-12-24 09:39:59,077 - DEBUG - File  was copied.
+2018-12-24 09:39:59,172 - DEBUG - File  was copied.
+2018-12-24 09:39:59,264 - DEBUG - File  was copied.
+2018-12-24 09:39:59,359 - DEBUG - File  was copied.
+2018-12-24 09:39:59,448 - DEBUG - File  was copied.
+2018-12-24 09:39:59,553 - DEBUG - File  was copied.
+2018-12-24 09:39:59,637 - DEBUG - File  was copied.
+2018-12-24 09:39:59,723 - DEBUG - File  was copied.
+2018-12-24 09:39:59,801 - DEBUG - File  was copied.
+2018-12-24 09:39:59,912 - DEBUG - File  was copied.
+2018-12-24 09:40:00,012 - DEBUG - File  was copied.
+2018-12-24 09:40:00,098 - DEBUG - File  was copied.
+2018-12-24 09:40:00,186 - DEBUG - File  was copied.
+2018-12-24 09:40:00,269 - DEBUG - File  was copied.
+2018-12-24 09:40:00,356 - DEBUG - File  was copied.
+2018-12-24 09:40:00,461 - DEBUG - File  was copied.
+2018-12-24 09:40:00,544 - DEBUG - File  was copied.
+2018-12-24 09:40:00,629 - DEBUG - File  was copied.
+2018-12-24 09:40:00,717 - DEBUG - File  was copied.
+2018-12-24 09:40:00,802 - DEBUG - File  was copied.
+2018-12-24 09:40:00,889 - DEBUG - File  was copied.
+2018-12-24 09:40:00,975 - DEBUG - File  was copied.
+2018-12-24 09:40:01,078 - DEBUG - File  was copied.
+2018-12-24 09:40:01,168 - DEBUG - File  was copied.
+2018-12-24 09:40:01,249 - DEBUG - File  was copied.
+2018-12-24 09:40:01,335 - DEBUG - File  was copied.
+2018-12-24 09:40:01,425 - DEBUG - File  was copied.
+2018-12-24 09:40:01,516 - DEBUG - File  was copied.
+2018-12-24 09:40:01,602 - DEBUG - File  was copied.
+2018-12-24 09:40:01,690 - DEBUG - File  was copied.
+2018-12-24 09:40:01,778 - DEBUG - File  was copied.
+2018-12-24 09:40:01,869 - DEBUG - File  was copied.
+2018-12-24 09:40:01,958 - DEBUG - File  was copied.
+2018-12-24 09:40:02,042 - DEBUG - File  was copied.
+2018-12-24 09:40:02,161 - DEBUG - File  was copied.
+2018-12-24 09:40:02,237 - DEBUG - File  was copied.
+2018-12-24 09:40:02,358 - DEBUG - File  was copied.
+2018-12-24 09:40:02,456 - DEBUG - File  was copied.
+2018-12-24 09:40:02,618 - DEBUG - File  was copied.
+2018-12-24 09:40:02,706 - DEBUG - File  was copied.
+2018-12-24 09:40:02,818 - DEBUG - File  was copied.
+2018-12-24 09:40:02,943 - DEBUG - File  was copied.
+2018-12-24 09:40:03,064 - DEBUG - File  was copied.
+2018-12-24 09:40:03,177 - DEBUG - File  was copied.
+2018-12-24 09:40:03,294 - DEBUG - File  was copied.
+2018-12-24 09:40:03,295 - DEBUG - Folder: "Drum Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Drum Loops" 
+2018-12-24 09:40:03,305 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:03,307 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Percussion Loops
+2018-12-24 09:40:03,445 - DEBUG - File  was copied.
+2018-12-24 09:40:03,530 - DEBUG - File  was copied.
+2018-12-24 09:40:03,627 - DEBUG - File  was copied.
+2018-12-24 09:40:03,734 - DEBUG - File  was copied.
+2018-12-24 09:40:03,823 - DEBUG - File  was copied.
+2018-12-24 09:40:03,981 - DEBUG - File  was copied.
+2018-12-24 09:40:04,140 - DEBUG - File  was copied.
+2018-12-24 09:40:04,321 - DEBUG - File  was copied.
+2018-12-24 09:40:04,635 - DEBUG - File  was copied.
+2018-12-24 09:40:04,943 - DEBUG - File  was copied.
+2018-12-24 09:40:05,285 - DEBUG - File  was copied.
+2018-12-24 09:40:05,589 - DEBUG - File  was copied.
+2018-12-24 09:40:05,739 - DEBUG - File  was copied.
+2018-12-24 09:40:05,910 - DEBUG - File  was copied.
+2018-12-24 09:40:05,995 - DEBUG - File  was copied.
+2018-12-24 09:40:06,080 - DEBUG - File  was copied.
+2018-12-24 09:40:06,168 - DEBUG - File  was copied.
+2018-12-24 09:40:06,324 - DEBUG - File  was copied.
+2018-12-24 09:40:06,489 - DEBUG - File  was copied.
+2018-12-24 09:40:06,783 - DEBUG - File  was copied.
+2018-12-24 09:40:06,868 - DEBUG - File  was copied.
+2018-12-24 09:40:06,950 - DEBUG - File  was copied.
+2018-12-24 09:40:07,096 - DEBUG - File  was copied.
+2018-12-24 09:40:07,242 - DEBUG - File  was copied.
+2018-12-24 09:40:07,534 - DEBUG - File  was copied.
+2018-12-24 09:40:07,823 - DEBUG - File  was copied.
+2018-12-24 09:40:07,993 - DEBUG - File  was copied.
+2018-12-24 09:40:08,098 - DEBUG - File  was copied.
+2018-12-24 09:40:08,310 - DEBUG - File  was copied.
+2018-12-24 09:40:08,464 - DEBUG - File  was copied.
+2018-12-24 09:40:08,623 - DEBUG - File  was copied.
+2018-12-24 09:40:08,704 - DEBUG - File  was copied.
+2018-12-24 09:40:08,862 - DEBUG - File  was copied.
+2018-12-24 09:40:09,009 - DEBUG - File  was copied.
+2018-12-24 09:40:09,370 - DEBUG - File  was copied.
+2018-12-24 09:40:09,541 - DEBUG - File  was copied.
+2018-12-24 09:40:09,646 - DEBUG - File  was copied.
+2018-12-24 09:40:09,756 - DEBUG - File  was copied.
+2018-12-24 09:40:09,905 - DEBUG - File  was copied.
+2018-12-24 09:40:10,063 - DEBUG - File  was copied.
+2018-12-24 09:40:10,299 - DEBUG - File  was copied.
+2018-12-24 09:40:10,444 - DEBUG - File  was copied.
+2018-12-24 09:40:10,590 - DEBUG - File  was copied.
+2018-12-24 09:40:10,671 - DEBUG - File  was copied.
+2018-12-24 09:40:10,759 - DEBUG - File  was copied.
+2018-12-24 09:40:10,760 - DEBUG - Folder: "Percussion Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Percussion Loops" 
+2018-12-24 09:40:10,770 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\FX\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:10,771 - DEBUG - LICENSE_README.docx ALREADY EXISTS in FX Risers
+2018-12-24 09:40:10,871 - DEBUG - File  was copied.
+2018-12-24 09:40:11,027 - DEBUG - File  was copied.
+2018-12-24 09:40:11,187 - DEBUG - File  was copied.
+2018-12-24 09:40:11,329 - DEBUG - File  was copied.
+2018-12-24 09:40:11,477 - DEBUG - File  was copied.
+2018-12-24 09:40:11,782 - DEBUG - File  was copied.
+2018-12-24 09:40:12,062 - DEBUG - File  was copied.
+2018-12-24 09:40:12,405 - DEBUG - File  was copied.
+2018-12-24 09:40:12,556 - DEBUG - File  was copied.
+2018-12-24 09:40:12,674 - DEBUG - File  was copied.
+2018-12-24 09:40:12,675 - DEBUG - Folder: "FX Risers" Moved to "Z:\Music_RT\12_Sorted_Samples\FX\Black Octopus\Downtempo Delights\FX Risers" 
+2018-12-24 09:40:12,682 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:12,684 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Synth Hits
+2018-12-24 09:40:12,732 - DEBUG - File  was copied.
+2018-12-24 09:40:12,778 - DEBUG - File  was copied.
+2018-12-24 09:40:12,820 - DEBUG - File  was copied.
+2018-12-24 09:40:12,883 - DEBUG - File  was copied.
+2018-12-24 09:40:12,928 - DEBUG - File  was copied.
+2018-12-24 09:40:13,006 - DEBUG - File  was copied.
+2018-12-24 09:40:13,060 - DEBUG - File  was copied.
+2018-12-24 09:40:13,135 - DEBUG - File  was copied.
+2018-12-24 09:40:13,180 - DEBUG - File  was copied.
+2018-12-24 09:40:13,244 - DEBUG - File  was copied.
+2018-12-24 09:40:13,244 - DEBUG - Folder: "Synth Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Synth Hits" 
+2018-12-24 09:40:13,254 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:13,255 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Bass Loops
+2018-12-24 09:40:13,431 - DEBUG - File  was copied.
+2018-12-24 09:40:13,580 - DEBUG - File  was copied.
+2018-12-24 09:40:13,749 - DEBUG - File  was copied.
+2018-12-24 09:40:13,762 - DEBUG - File  was copied.
+2018-12-24 09:40:13,908 - DEBUG - File  was copied.
+2018-12-24 09:40:13,926 - DEBUG - File  was copied.
+2018-12-24 09:40:14,078 - DEBUG - File  was copied.
+2018-12-24 09:40:14,366 - DEBUG - File  was copied.
+2018-12-24 09:40:14,652 - DEBUG - File  was copied.
+2018-12-24 09:40:14,985 - DEBUG - File  was copied.
+2018-12-24 09:40:15,137 - DEBUG - File  was copied.
+2018-12-24 09:40:15,424 - DEBUG - File  was copied.
+2018-12-24 09:40:15,727 - DEBUG - File  was copied.
+2018-12-24 09:40:16,057 - DEBUG - File  was copied.
+2018-12-24 09:40:16,343 - DEBUG - File  was copied.
+2018-12-24 09:40:16,495 - DEBUG - File  was copied.
+2018-12-24 09:40:16,660 - DEBUG - File  was copied.
+2018-12-24 09:40:16,958 - DEBUG - File  was copied.
+2018-12-24 09:40:17,106 - DEBUG - File  was copied.
+2018-12-24 09:40:17,191 - DEBUG - File  was copied.
+2018-12-24 09:40:17,301 - DEBUG - File  was copied.
+2018-12-24 09:40:17,457 - DEBUG - File  was copied.
+2018-12-24 09:40:18,052 - DEBUG - File  was copied.
+2018-12-24 09:40:18,212 - DEBUG - File  was copied.
+2018-12-24 09:40:18,382 - DEBUG - File  was copied.
+2018-12-24 09:40:18,552 - DEBUG - File  was copied.
+2018-12-24 09:40:18,841 - DEBUG - File  was copied.
+2018-12-24 09:40:18,985 - DEBUG - File  was copied.
+2018-12-24 09:40:18,986 - DEBUG - Folder: "Bass Loops" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Bass Loops" 
+2018-12-24 09:40:18,998 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:19,000 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Bass Hits
+2018-12-24 09:40:19,049 - DEBUG - File  was copied.
+2018-12-24 09:40:19,087 - DEBUG - File  was copied.
+2018-12-24 09:40:19,134 - DEBUG - File  was copied.
+2018-12-24 09:40:19,178 - DEBUG - File  was copied.
+2018-12-24 09:40:19,215 - DEBUG - File  was copied.
+2018-12-24 09:40:19,260 - DEBUG - File  was copied.
+2018-12-24 09:40:19,300 - DEBUG - File  was copied.
+2018-12-24 09:40:19,335 - DEBUG - File  was copied.
+2018-12-24 09:40:19,373 - DEBUG - File  was copied.
+2018-12-24 09:40:19,405 - DEBUG - File  was copied.
+2018-12-24 09:40:19,406 - DEBUG - Folder: "Bass Hits" Moved to "Z:\Music_RT\12_Sorted_Samples\Synths & Insts\Black Octopus\Downtempo Delights\Bass Hits" 
+2018-12-24 09:40:19,415 - DEBUG - Folder Z:\Music_RT\12_Sorted_Samples\Learning Resources\Black Octopus\Downtempo Delights ALREADY EXISTS.
+2018-12-24 09:40:19,417 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Videos
+2018-12-24 09:41:00,034 - DEBUG - File  was copied.
+2018-12-24 09:41:33,094 - DEBUG - File  was copied.
+2018-12-24 09:41:33,095 - DEBUG - Folder: "Videos" Moved to "Z:\Music_RT\12_Sorted_Samples\Learning Resources\Black Octopus\Downtempo Delights\Videos" 
+2018-12-24 09:41:33,307 - DEBUG - LICENSE_README.docx ALREADY EXISTS in Downtempo Delights
+2018-12-24 09:41:33,308 - DEBUG - Trying to move File "Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3" to Folder: Z:\Music_RT\12_Sorted_Samples\Drums\Black Octopus\Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3 
+2018-12-24 09:41:33,570 - DEBUG - File "Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights\Black Octopus Sound - Downtempo Delights (drums demo).mp3" has been moved.
+2018-12-24 09:41:33,571 - DEBUG - No unmoved folders to list. Skipping unmoved folder summary.

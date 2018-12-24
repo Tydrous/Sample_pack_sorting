@@ -383,9 +383,9 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 			try:
 				#local_folder = os.path.basename(move[0])#not sure i need this
 				for folderName, subfolders, filenames in os.walk(move[0]):
-					logging.debug('Moving_to_Folder is "%s" ' % (os.path.join(move[1], os.path.relpath(folderName, move[0]))))
+					#logging.debug('Moving_to_Folder is "%s" ' % (os.path.join(move[1], os.path.relpath(folderName, move[0]))))
 					moving_to_folder = os.path.abspath(os.path.join(move[1], os.path.relpath(folderName, move[0])))
-					logging.debug('Isdir? %s' % (os.path.isdir(moving_to_folder)))
+					#logging.debug('Isdir? %s' % (os.path.isdir(moving_to_folder)))
 					if os.path.isdir(moving_to_folder) == False:
 						logging.debug('Trying to Create folder "%s" ' % (moving_to_folder))
 
@@ -398,12 +398,13 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 						license_move(license_file_moves,moving_to_folder)
 
 					for filename in filenames:
-						if os.path.exists(moving_to_folder) == False:
-							shutil.copy(os.path.join(folderName,filename), moving_to_folder)
+						if os.path.isfile(filename) == False:
+							shutil.copy(os.path.abspath(os.path.join(folderName,filename)), moving_to_folder)
 							files_bar.set_description('File: %-37s ' % os.path.basename(filename))
+							logging.debug('File %s was copied.' % (os.path.dirname(filename)))
 						else:
 							files_bar.set_description('File: %-23s ALREADY EXISTS' % os.path.basename(filename))
-
+							logging.debug('File %s ALREADY EXISTS.' % (os.path.basename(filename)))
 						files_bar.update(1)
 
 				folders_bar.update(1)
