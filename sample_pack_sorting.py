@@ -1,49 +1,26 @@
 #! python3
 
 r'''
-Verison .02
+Verison .03
 Written by Tydrous
+Features
+- Categories.txt holds a list of the oganization folders to create and the "tags" that will be used to match on files and folders
+	- A tag is a word that will be used to 
+- For best results select the folder that is closest to the folders containing samples to be sorted.
+
+
 Limitations
- - 
-
-#Create lists of names to search for and what category they go in.
-#Get the source folder location														- DONE
-#Get the destination folder location												- DONE		
-#Read in all of the files and folders in the source folder 							- DONE
-#Save off the original file name 													- DONE
-#Prompt from a list of sample companies 											- DONE
-#	Read in a list of companies from the destination folder. 						- DONE
-#		If one doesn't exists prompt the user to find the file. 					- DONE
-#	Allow for the addition of a new company 										- DONE
-#	Save off the list to the destination folder 									- DONE
-#Determine if the current folder structure is acceptable.							- DONE						
-#	If files are broken up into folders and sub folders with the samples broken out just move the entire folder
-#	If not then search through the files in all of the folders and move them into the new folder structure
-	If there are duplicates for any reason while moving rename the file with a - 01 or next available number.
-
-
-
-Notes of things to try and optimize
-- Sorting
-	- right now the sorting is rather inificient. Need to find some way of reducing the number of loop iterations. 
-		- Try to figure out gow to remove all files form file list that are within a folder that has already been marked for movement. 
-
-- On roll back remove folders created in the destination folder. 
-
-
-
-
+ - Some manual prep of a sample pack may be necessary. For example if lots of ambiguous names are used on folders but you wish to retain them put them inside if a more meaningful folder name that will get sorted. 
+ - On roll back remove folders created in the destination folder. 
 
 What i'm currently working on
-- Move a copy of the license file and readme files to all destiation folders
-- Write a method to remove items from the unmoved lists that are contained within another folder that is being moved.
-	- This might already be done
 - Finding a way to sort the catagories list into a longest prefix match type search so that most specific path matches first when searching through the files and folders. 
 	- Create a list rather than a dict so it is done in order. 
-	- List
-		tag 		category
-		0 			1
-- Update Totalling bars to totally using counters only
+		- List
+			tag 		category
+			0 			1
+	- If there are duplicates for any reason while moving rename the file with a - 01 or next available number.
+		- Right now I believe the file will just be ignored and skipped since the file will hit the already exists check and get skipped.
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
