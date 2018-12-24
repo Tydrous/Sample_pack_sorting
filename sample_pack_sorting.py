@@ -29,19 +29,21 @@ Notes of things to try and optimize
 		- Try to figure out gow to remove all files form file list that are within a folder that has already been marked for movement. 
 
 - On roll back remove folders created in the destination folder. 
-\
+
 
 
 
 
 What i'm currently working on
 - Move a copy of the license file and readme files to all destiation folders
+- Write a method to remove items from the unmoved lists that are contained within another folder that is being moved.
+	- This might already be done
 - Finding a way to sort the catagories list into a longest prefix match type search so that most specific path matches first when searching through the files and folders. 
 	- Create a list rather than a dict so it is done in order. 
 	- List
 		tag 		category
 		0 			1
-
+- Update Totalling bars to totally using counters only
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
@@ -57,10 +59,9 @@ from tqdm import tqdm
 logging.basicConfig(filename='log_file.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 #logging.basicConfig( level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 root = tkinter.Tk()
-root.withdraw()#hides the initial dialog window
+root.withdraw()#hides the initial dialog window for tikinter
 
 folder_categories_file = 'categories.txt'
-#folder_categories_file = ''
 
 file_moves = []#Will hold all of the sources and destination paths of files to be moved. 
 folder_moves = []#Will hold all of the sources and destination paths of folders to be moved. 
@@ -70,7 +71,9 @@ skipped_files = []#Tracks the files that were skipped because they already exist
 skipped_folders = []#Tracks the files that were skipped because they already existsed
 remember_source_starting_loc = ''#used to store previous source folder to reprompt on that same folder next iteration
 remember_dest_starting_loc = ''#used to store previous destination folder to reprompt on that same folder next iteration
-
+license_info_tags = ['readme', 'read me', 'license', 'tips']#Used to match on any license file or read me and copy into every destination
+license_file_moves = []#Will hold a list of the source paths of all license and read me files that matches license_info_tags. Will contain the abs path of the license files. 
+move_licenses = True# If set to true a coppy of the License files and read me files matched in license_info_tags list will be move to all destination folders.
 remember_source_starting_loc = r'Z:\Music_RT\01_Samples'
 remember_dest_starting_loc = r'Z:\Music_RT\12_Sorted_Samples'
 
@@ -96,7 +99,6 @@ def insert_key_folder_location(dest_dict, dest_path, company):
 		path = os.path.abspath(os.path.join(dest_path, key))#Save off the path
 		dest_dict[key].insert(0, path)#insert the location of the folder to place things that match 
 		logging.debug('Adding path %s to dictionary' % path)
-
 	return dest_dict
 
 def dest_folder_setup(dest_path, dest_dict,company):#Appends the full file path to the list attached to each key. Checks if the folder exists if not the folder gets created.  
@@ -319,7 +321,7 @@ def company_folder_setup(company, dest_dict):#Takes the company passed in and ad
 			if os.path.isdir(company_path) == False:#Checks if the folder in the list already exists. If so nothing happens. If not the folder is created. 
 				logging.debug('Creating Folder at %s' % company_path)
 				#os.makedirs(company_path)#no longer needed since the move and copy functions I am using create the necessary folders. This just creates clutter.
-		logging.debug("All required Company Folders exist")
+		logging.debug("All required Folders exist")
 
 def get_dest_folder_file():#Checks if the file needed to build the the destination folders. If not it prompts the user to locate the file. 
 	file = folder_categories_file
@@ -333,124 +335,170 @@ def get_dest_folder_file():#Checks if the file needed to build the the destinati
 
 def summarize_folder_moves(list_of_moves):#Will take in a list of the source and destination of folders and print them to the screen for review before moving them.
 	max_length = 150
-	for item in list_of_moves:
-		if len(item) * 2 > max_length:
-			max_length = ( len(item) * 2) + 5
+	if list_of_moves != []:	
+		for item in list_of_moves:
+			if len(item) * 2 > max_length:
+				max_length = ( len(item) * 2) + 5
 
-	print('FOLDERS TO BE MOVED'.center(max_length, '='))
-	print('%-80s  |  %-80s ' %('Source Folders', 'Destination'))
-	for move in list_of_moves:
-		source = '"' + get_rel_path([move[0],move[2]]) + '"'
-		destination = '"' + get_rel_path([move[1],move[3]])  + '"'
-		print('%-80s  >  %-80s ' %(source, destination))
-	print('END'.center(max_length, '='))
+		print('FOLDERS TO BE MOVED'.center(max_length, '='))
+		print('%-80s  |  %-80s ' %('Source Folders', 'Destination'))
+		for move in list_of_moves:
+			source = '"' + get_rel_path([move[0],move[2]]) + '"'
+			destination = '"' + get_rel_path([move[1],move[3]])  + '"'
+			print('%-80s  >  %-80s ' %(source, destination))
+		print('END'.center(max_length, '='))
+	else:
+		print('NO FOLDERS TO BE MOVED'.center(max_length, '='))
+		logging.debug('No folders to move. Skipping move folders summary.')
 
 def summarize_files_moves(list_of_moves):#Will take in a list of the source and destination of folders and print them to the screen for review before moving them.
 	max_length = 150
-	for item in list_of_moves:
-		if len(item) * 2 > max_length:
-			max_length = ( len(item) * 2) + 5
-	print('FILES TO BE MOVED'.center(max_length, '='))
-	print('%-80s  |  %-80s ' %('Source Files', 'Destination'))
-	for move in file_moves:
-		source = '"' + get_rel_path([move[0],move[2]]) + '"'
-		destination = '"' + get_rel_path([move[1],move[3]])  + '"'
-		print('%-80s  >  %-80s ' %(source, destination))
-	print('END'.center(max_length, '='))
+	if list_of_moves != []:	
+		for item in list_of_moves:
+			if len(item) * 2 > max_length:
+				max_length = ( len(item) * 2) + 5
+		print('FILES TO BE MOVED'.center(max_length, '='))
+		print('%-80s  |  %-80s ' %('Source Files', 'Destination'))
+		for move in file_moves:
+			source = '"' + get_rel_path([move[0],move[2]]) + '"'
+			destination = '"' + get_rel_path([move[1],move[3]])  + '"'
+			print('%-80s  >  %-80s ' %(source, destination))
+		print('END'.center(max_length, '='))
+	else:
+		print('NO FILES TO BE MOVED'.center(max_length, '='))
+		logging.debug('No files to move. Skipping move files summary.')
 
-def summarize_unmoved_folders(list_of_umoved_items):#This will take a list of folders that did not match on anything and output them for review
+def summarize_unmoved_folders(list_of_unmoved_items):#This will take a list of folders that did not match on anything and output them for review
 	max_length = 150
-	for item in list_of_umoved_items:
-		if len(item) * 2 > max_length:
-			max_length = ( len(item) * 2) + 5
-	print('ALL OF THE UNMATCHED FOLDERS'.center(max_length, '='))
-	print('%s' %('Folders'))
-	for move in list_of_umoved_items:
-		source = get_rel_path([move[0],move[2]])
-		destination = get_rel_path([move[1],move[3]])
-		print('"%s" will NOT be moved ' %(move))
-	print('END'.center(max_length, '='))
+	if list_of_unmoved_items != []:
+		for item in list_of_unmoved_items:
+			if len(item) * 2 > max_length:
+				max_length = ( len(item) * 2) + 5
+		print('ALL OF THE UNMATCHED FOLDERS'.center(max_length, '='))
+		print('%s' %('Folders'))
+		for move in list_of_unmoved_items:
+			print('"%s" will NOT be moved ' %(move))
+		print('END'.center(max_length, '='))
+	else:
+		logging.debug('No unmoved folders to list. Skipping unmoved folder summary.')
 
-def summarize_unmoved_files(list_of_umoved_items):##This will take a list of files that did not match on anything and output them for review
+def summarize_unmoved_files(list_of_unmoved_items):##This will take a list of files that did not match on anything and output them for review
 	max_length = 150
-	for item in list_of_umoved_items:
-		if len(item) * 2 > max_length:
-			max_length = ( len(item) * 2) + 5
-	print('ALL OF THE UNMATCHED FILES'.center(max_length, '='))
-	print('%s' %('Files'))
-	for item in list_of_umoved_items:
-		print('File "%s" will NOT be moved ' %(item))
-	print('END'.center(max_length, '='))
+	if list_of_unmoved_items != []:	
+		for item in list_of_unmoved_items:
+			if len(item) * 2 > max_length:
+				max_length = ( len(item) * 2) + 5
+		print('ALL OF THE UNMATCHED FILES'.center(max_length, '='))
+		print('%s' %('Files'))
+		for item in list_of_unmoved_items:
+			print('File "%s" will NOT be moved ' %(item))
+		print('END'.center(max_length, '='))
+	else:
+		logging.debug('No unmoved files to list. Skipping unmoved file summary.')
 
 def execute_folder_moves(list_of_folder_moves):#Actually performs the moves passed into the function
-	total_files_counter, total_folders_counter = count_files_and_folders(list_of_folder_moves[0][2])
-	files_bar = tqdm(total=total_files_counter, desc="Files")
-	folders_bar = tqdm(total=total_folders_counter, desc="Folders")
-	for move in list_of_folder_moves:
-		folders_bar.set_description('Folder name %-35s ' % os.path.basename(move[0]))
-		try:
-			#local_folder = os.path.basename(move[0])#not sure i need this
-			for folderName, subfolders, filenames in os.walk(move[0]):
-				moving_to_folder = os.path.join(move[1], os.path.relpath(folderName, move[0]))
-				if os.path.exists(moving_to_folder) == False:
-					os.makedirs(moving_to_folder)
-				for filename in filenames:
-					shutil.copy(os.path.join(folderName,filename), moving_to_folder)
-					files_bar.set_description('File name %-37s ' % os.path.basename(filename))
-					files_bar.update(1)
-			folders_bar.update(1)
-			print()
-			'''
-			this part does in fact actually work
-			distutils.dir_util.copy_tree(move[0],move[1])
-			logging.debug('Folder "%s" has been moved.'%(move[0]))
-			'''
-			#bypassing delete
-			#distutils.dir_util.remove_tree(move[0])
-			#logging.debug('Folder "%s" has been deleted.'%(move[0]))
+	if list_of_folder_moves != []:	
+		total_files_counter, total_folders_counter = count_files_and_folders(list_of_folder_moves[0][2])
+		files_bar = tqdm(total=total_files_counter, desc="Files")
+		folders_bar = tqdm(total=total_folders_counter, desc="Folders")
+		for move in list_of_folder_moves:
+			folders_bar.set_description('Folder: %-35s ' % os.path.basename(move[0]))
+			try:
+				#local_folder = os.path.basename(move[0])#not sure i need this
+				for folderName, subfolders, filenames in os.walk(move[0]):
+					logging.debug('Moving_to_Folder is "%s" ' % (os.path.join(move[1], os.path.relpath(folderName, move[0]))))
+					moving_to_folder = os.path.abspath(os.path.join(move[1], os.path.relpath(folderName, move[0])))
+					logging.debug('Isdir? %s' % (os.path.isdir(moving_to_folder)))
+					if os.path.isdir(moving_to_folder) == False:
+						logging.debug('Trying to Create folder "%s" ' % (moving_to_folder))
 
-		except distutils.errors.DistutilsFileError:
-			logging.debug('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
-			print('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
-			skipped_folders.append([move[0],move[1]])
-			continue
-		'''
-		except:
-			logging.debug('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
-			print('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
-			skipped_folders.append([move[0],move[1]])
-			continue
-		'''
-	files_bar.close()
-	folders_bar.close()
+						os.makedirs(moving_to_folder)
+						logging.debug('Folder %s was created.' % (os.path.dirname(moving_to_folder)))
+					else:
+						logging.debug('Folder %s ALREADY EXISTS.' % (os.path.dirname(moving_to_folder)))
+
+					if move_licenses:
+						license_move(license_file_moves,moving_to_folder)
+
+					for filename in filenames:
+						if os.path.exists(moving_to_folder) == False:
+							shutil.copy(os.path.join(folderName,filename), moving_to_folder)
+							files_bar.set_description('File: %-37s ' % os.path.basename(filename))
+						else:
+							files_bar.set_description('File: %-23s ALREADY EXISTS' % os.path.basename(filename))
+
+						files_bar.update(1)
+
+				folders_bar.update(1)
+				logging.debug('Folder: "%s" Moved to "%s" '%(os.path.basename(move[0]), move[1]))
+				print()
+				'''
+				this part does in fact actually work
+				distutils.dir_util.copy_tree(move[0],move[1])
+				logging.debug('Folder "%s" has been moved.'%(move[0]))
+				'''
+				#bypassing delete
+				#distutils.dir_util.remove_tree(move[0])
+				#logging.debug('Folder "%s" has been deleted.'%(move[0]))
+
+			except distutils.errors.DistutilsFileError:
+				logging.debug('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
+				print('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
+				skipped_folders.append([move[0],move[1]])
+				continue
+			'''
+			except:
+				logging.debug('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
+				print('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
+				skipped_folders.append([move[0],move[1]])
+				continue
+			'''
+		files_bar.close()
+		folders_bar.close()
+	else:
+		logging.debug('No Folders to move. Skipping folder moves.')
 
 def execute_file_moves(list_of_file_moves):#Actually performs the moves passed into the function
-	with tqdm(total = len(list_of_file_moves)) as pbar:
+	if list_of_file_moves != []:
+		total_files_counter, total_folders_counter = count_files_and_folders(list_of_file_moves[0][2])
+		files_bar = tqdm(total=total_files_counter, desc="Files")
+		
 		for move in list_of_file_moves:
 			try:
-				path = os.path.dirname(move[1])
-				if os.path.exists(os.path.abspath(os.path.dirname(move[1]))) == False:
-					os.makedirs(move[1])
+				moving_to_folder = os.path.abspath(move[1])
+				path = os.path.dirname(moving_to_folder)
 
-				if os.path.exists(move[0]) :
-					logging.debug('Trying to move File "%s" to Folder: %s '%(move[0], move[1]))
+				if os.path.isdir(os.path.abspath(moving_to_folder)) == False:
+					os.makedirs(move[1])
+					logging.debug('Folder %s was created.' % (os.path.dirname(moving_to_folder)))
+		
+				if move_licenses:
+					license_move(license_file_moves,moving_to_folder)
+
+				if os.path.exists(move[0]):
+					files_bar.set_description('File: %-37s ' % os.path.basename(move[0]))
+					logging.debug('Trying to move File "%s" to Folder: %s '%(move[0], os.path.abspath(os.path.join(move[1], os.path.basename(move[0])))))
 					#bypassing move
 					#distutils.file_util.move_file(move[0],os.path.abspath(os.path.join(move[1], os.path.basename(move[0]))))
 					distutils.file_util.copy_file(move[0],os.path.abspath(os.path.join(move[1], os.path.basename(move[0]))))
 					logging.debug('File "%s" has been moved.'%(move[0]))
 				else:
 					logging.debug('File "%s" has already been moved.'%(move[0]))
-				pbar.update(1)
+				files_bar.update(1)
+
 			except distutils.errors.DistutilsFileError:
 				logging.debug('File already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
 				#print('File already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
-				pbar.update(1)
+				files_bar.update(1)
 				continue
 			except:
 				logging.debug('Error while trying to move File "%s" to %s SKIPPED.'% (str(move[0]), str(move[1])))
 				#print('Error while trying to move File "%s" to %s SKIPPED.'%(str(move[0]), str(move[1])))
-				pbar.update(1)
+				files_bar.update(1)
 				continue
+		files_bar.close()
+	else:
+		logging.debug('No Files to move. Skipping file moves.')
 
 def count_files_and_folders(folder_path):#Takes in a folder path then counts all the files and folders inside that directory. Then returns a list of intergers. Index 0 is the total of files and Index 1 is the total of folders.
 	total_files_counter = 0
@@ -507,6 +555,18 @@ def get_rel_path(move=[]):
 	rel_path = os.path.relpath(move[0], move[1])
 	return rel_path
 
+def license_move(license_file_moves, destination):#Moves the all files in license_file_moves into whatever destination is specified. 
+	for file in license_file_moves:
+		try:
+			if os.path.isfile(os.path.join(destination, os.path.basename(file))) == False:
+				shutil.copy(file, destination)
+				logging.debug('License File %s was moved to %s' % (os.path.basename(file), os.path.basename(destination)))
+			else:
+				logging.debug('%s ALREADY EXISTS in %s' % (os.path.basename(file), os.path.basename(destination)))
+		except:
+			logging.debug('Error while moving license file %s' % os.path.basename(file))
+
+
 continue_program = True#while this remains true the programm will continue to run and keep asking for more packs
 #Main loop
 while continue_program:
@@ -537,12 +597,22 @@ while continue_program:
 	Index			0			1				2				3
 	'''
 	for root, folders, files in os.walk(source_folder):
+		#search for license files in directories
+		logging.debug('Searching for License and Read me Files')
+		for tag in license_info_tags:
+				license_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)
+				license_matches = list(filter(license_regex.match, files))
+				for match in license_matches:
+					license_match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
+					license_file_moves.append(license_match_path)#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
+					files.remove(match)#removes the license_match_path from the files list so that it isn't matched more than once.
+					logging.debug('License or Read me File found %s' %(os.path.basename(license_match_path)))
 		#Searches through all of the folders 
 		for key in dest_dict:
 			with tqdm(total = len(dest_dict[key][1]), desc=key) as pbar1:
 				for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
 					tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
-					local_matches = list(filter(tag_regex.match, folders))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
+					local_matches = list(filter(tag_regex.match, folders))#This is where the actual matching takes place. The filter method is called and the tag_regex.match is passed in to determine the match criteria. The folders list is passed in which is a list of all Folder names in the directory currently being iterated through.
 					for match in local_matches:#Iterates through the filter object which contains all matches from the filter
 						match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
 						dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company, match))#Creates the full path of the matched file
