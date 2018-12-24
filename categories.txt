@@ -1,7 +1,8 @@
-Construction Kits & ideas          	: construction kits, template, walkthrough, complete mix, project, Ableton Live, musicloops, music loops 
-Drums               				: kick, hihat, ohh, openhat, chh, tom, crash, cymbal, open hihat, closed hihat, drum, bassdrum, clap, fills, snare, snap, percussion, hi hat, bass drum, perc, ride, shaker, 808, drum loops, drumloops, top loop, bongo, conga,snare roll, drumm roll, rimshot, clave
+Construction Kits & ideas          	: construction kits, template, complete mix, project, Ableton Live, musicloops, music loops, loops_music, musical loops, songstarters, song starters, starter kits, .flp, .als 
+Drums               				: kick, hihat, ohh, openhat, chh, tom, crash, cymbal, open hihat, closed hihat, drum, bassdrum, clap, fill, snare, snap, percussion, hi hat, bass drum, perc, ride, shaker, 808, drum loops, drumloops, top loop, bongo, conga,snare roll, drumm roll, rimshot, clave, toploop, tops, beats
 Foley & Atmo						: atmo, foley, atmosphere, texture, bird, footsteps, forest, rain, water, wind, glitch, Vinyl, city, nature,atm, ambient, ambiences
-FX									: fx loop, impact, riser, faller, fx, explosions, uplifer, downlifter, noise, sweeps up, sweep up, sweep down, sweeps down, deep hit, swoosh, short up, long up, effect
+FX									: fx loop, impact, riser, faller, fx, explosions, uplifter, downlifter, noise, sweeps up, sweep up, sweep down, sweeps down, deep hit, swoosh, short up, long up, effect
 Synths & Insts						: synth, instrument, inst, melodic,melody, lead, synthesizer, bass loop,chord, chord loop, bass, pad, bass hit, synth hit, lead loop, bassline, arps, sub bass, sq, sequences, progression, guitar, hit, acid, drone, violin,cello,double bass,flute,clarinet,saxophone,trumpet,guitar,piano,harp, horn, digeridoo,paino,string, keyboard, keys, pluck, sequence, orchestra, stab
 Vocal								: vox, vocal, vocal atmosphere, acapella , vocal chop, chop, vocod, male, female, vocalist, vocal swell,Melodic Phrases, ooh, ahh, adlib melodies, scat
 Midi								: .midi, .mid, midi
+Learning Resources					: videos, walkthrough, tutorial
