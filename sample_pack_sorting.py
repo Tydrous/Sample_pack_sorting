@@ -24,7 +24,6 @@ What i'm currently working on
 	
 	- Create a guide
 	- Create some options for sending presets to specific folders.
-	- Figure out a way to deal with '.' in the input tags.
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
@@ -57,8 +56,13 @@ remember_dest_starting_loc = ''#used to store previous destination folder to rep
 license_info_tags = ['readme', 'read me', 'license', 'tips']#Used to match on any license file or read me and copy into every destination
 license_file_moves = []#Will hold a list of the source paths of all license and read me files that matches license_info_tags. Will contain the abs path of the license files. 
 move_licenses = True# If set to true a coppy of the License files and read me files matched in license_info_tags list will be move to all destination folders.
-remember_source_starting_loc = r'Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Vocal Atmospheres by Cory Friesenhan\Black Octopus Sound - Vocal Atmospheres by Cory Friesenhan'
+remember_source_starting_loc = r'Z:\Music_RT\01_Samples'
 remember_dest_starting_loc = r'Z:\Music_RT\13_Sorted_Samples'
+skip_folder_count = 0
+skip_file_count = 0
+total_files_counter = 0
+total_folders_counter = 0
+
 
 class Error(Exception):
    #Base class for other exceptions
@@ -392,7 +396,7 @@ def summarize_unmoved_files(list_of_unmoved_items):##This will take a list of fi
 
 def execute_folder_moves(list_of_folder_moves):#Actually performs the moves passed into the function
 	if list_of_folder_moves != []:	
-		total_files_counter, total_folders_counter = count_files_and_folders(list_of_folder_moves[0][2])
+		total_files_counter = count_files_and_folders(list_of_folder_moves[0][2])
 		files_bar = tqdm(total=total_files_counter, desc="Files")
 		folders_bar = tqdm(total=total_folders_counter, desc="Folders")
 		for move in list_of_folder_moves:
@@ -455,7 +459,7 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 
 def execute_file_moves(list_of_file_moves):#Actually performs the moves passed into the function
 	if list_of_file_moves != []:
-		total_files_counter, total_folders_counter = count_files_and_folders(list_of_file_moves[0][2])
+		total_files_counter = count_files_and_folders(list_of_file_moves[0][2])
 		files_bar = tqdm(total=total_files_counter, desc="Files")
 		
 		for move in list_of_file_moves:
@@ -496,6 +500,7 @@ def execute_file_moves(list_of_file_moves):#Actually performs the moves passed i
 		logging.debug('No Files to move. Skipping file moves.')
 
 def count_files_and_folders(folder_path):#Takes in a folder path then counts all the files and folders inside that directory. Then returns a list of intergers. Index 0 is the total of files and Index 1 is the total of folders.
+	logging.debug('File and Folder count initiated')
 	total_files_counter = 0
 	total_folders_counter = 0 
 	file_count_bar = tqdm(desc="Files Counted ")
@@ -508,7 +513,11 @@ def count_files_and_folders(folder_path):#Takes in a folder path then counts all
 		total_folders_counter += 1
 	file_count_bar.close()
 	folder_count_bar.close()
-	return [total_files_counter,total_folders_counter]
+	logging.debug('Before Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
+	total_files_counter -= skip_file_count
+	total_folders_counter -= skip_folder_count
+	logging.debug('After Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
+	return total_files_counter
 	r'''
 	Description		Total Files		Total Folders 	
 	Index			0				1	
@@ -565,6 +574,10 @@ def license_move(license_file_moves, destination):#Moves the all files in licens
 continue_program = True#while this remains true the programm will continue to run and keep asking for more packs
 #Main loop
 while continue_program:
+	total_files_counter = 0
+	total_folders_counter = 0
+	skip_folder_count = 0
+	skip_file_count = 0
 
 	source_folder = get_folder_name("Please select the source folder: ", remember_source_starting_loc)
 	destination_folder = get_folder_name("Please select the destination folder: ", remember_dest_starting_loc)
@@ -591,6 +604,7 @@ while continue_program:
 	Description		Source 		destination 	Source Folder 	Destination Folder
 	Index			0			1				2				3
 	'''
+
 	for root, folders, files in os.walk(source_folder):
 		#search for license files in directories
 		logging.debug('Searching for License and Read me Files')
@@ -604,6 +618,7 @@ while continue_program:
 					
 					files.remove(match)#removes the license_match_path from the files list so that it isn't matched more than once.
 					logging.debug('License or Read me File found %s' %(os.path.basename(license_match_path)))
+
 		#Searches through all of the folders 
 		for key in dest_dict:
 			with tqdm(total = len(dest_dict[key][1]), desc=key) as pbar1:
@@ -618,10 +633,14 @@ while continue_program:
 						logging.debug('A match was made on %s' % (match_path))
 						folder_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
 						folders.remove(match)#removes the match from the files list so that it isn't matched more than once.
+						total_folders_counter += 1
 					pbar1.update(1)
 		for folder in folders:#this will search through any file left in the files list and add it as a unmatched file. 
-			logging.debug('NO MATCH WAS MADE ON %s' % (folder))
+			logging.debug('NO MATCH WAS MADE TO FOLDER %s' % (folder))
 			unmatched_folders.append(folder)
+			skip_folder_count += 1
+			logging.debug('skip_folder_count + 1')
+
 
 		#Searches through all of the files 
 		for key in dest_dict:
@@ -635,9 +654,12 @@ while continue_program:
 					logging.debug("Match was made with Tag: %s Match: %s" % (tag, match))
 					file_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
 					files.remove(match)#removes the match from the files list so that it isn't matched more than once.
+					total_files_counter += 1
 		for file in files:#this will search through any file left in the files list and add it as a unmatched file. 
-			logging.debug('NO MATCH WAS MADE ON %s' % (file))
+			logging.debug('NO MATCH WAS MADE TO FILE %s' % (file))
 			unmatched_files.append(file)
+			skip_file_count += 1
+			logging.debug('skip_file_count + 1')
 
 	'''
 	Moves consists of a list of lists. Each list will have 2 items in it. 1 will be the source folder and 1 will be the destination folder. Source Folder and Destination Folder are the original folders sorting through.
