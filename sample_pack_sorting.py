@@ -21,12 +21,16 @@ What i'm currently working on
 			0 			1
 	- If there are duplicates for any reason while moving rename the file with a - 01 or next available number.
 		- Right now I believe the file will just be ignored and skipped since the file will hit the already exists check and get skipped.
+	
+	- Create a guide
+	- Create some options for sending presets to specific folders.
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
 from tkinter import filedialog
 from tkinter import simpledialog
 from tkinter import messagebox
+from tkinter import ttk
 import logging
 from distutils import dir_util
 from distutils import file_util
@@ -51,8 +55,8 @@ remember_dest_starting_loc = ''#used to store previous destination folder to rep
 license_info_tags = ['readme', 'read me', 'license', 'tips']#Used to match on any license file or read me and copy into every destination
 license_file_moves = []#Will hold a list of the source paths of all license and read me files that matches license_info_tags. Will contain the abs path of the license files. 
 move_licenses = True# If set to true a coppy of the License files and read me files matched in license_info_tags list will be move to all destination folders.
-remember_source_starting_loc = r'Z:\Music_RT\01_Samples'
-remember_dest_starting_loc = r'Z:\Music_RT\12_Sorted_Samples'
+remember_source_starting_loc = r'Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Ultimate Bangers & Anthems\Black Octopus Sound - Ultimate Bangers & Anthems'
+remember_dest_starting_loc = r'Z:\Music_RT\13_Sorted_Samples'
 
 class Error(Exception):
    #Base class for other exceptions
@@ -66,9 +70,25 @@ def txt_to_dict(filepath):#Reads in all of the items from a text file into a lis
 	for line in file:
 		colon_seperated = line.split(':')
 		key = colon_seperated[0].strip()
+		
+		logging.debug('Key: %s Tags:' % (key))
 		file_dict[key] = []
+		tag_list = []
 		if key != "":
-			file_dict[key].append([x.strip() for x in colon_seperated[1].split(',')])
+			for x in colon_seperated[1].split(','):
+				if x.strip() != '':
+					logging.debug('logic was True')
+					tag_list.append(x.strip())
+					logging.debug('tag_list' % (tag_list))
+				else:
+					logging.debug('logic was False')
+				logging.debug('x.strip() : %s' % (x.strip()))
+				
+			#logging.debug('tag_list' % (tags_list))
+		file_dict[key].append(tag_list)
+
+			#file_dict[key].append([x.strip() for x in colon_seperated[1].split(',')])
+	logging.debug('file_dict: %s' % (file_dict))
 	return file_dict
 
 def insert_key_folder_location(dest_dict, dest_path, company):
