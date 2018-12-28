@@ -24,6 +24,7 @@ What i'm currently working on
 	
 	- Create a guide
 	- Create some options for sending presets to specific folders.
+	- Figure out a way to deal with '.' in the input tags.
 
 '''
 import os, re, tkinter, logging, traceback, shutil, distutils
@@ -38,6 +39,7 @@ from tqdm import tqdm
 
 #Setup logging
 logging.basicConfig(filename='log_file.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.debug('================================================New Run================================================')
 #logging.basicConfig( level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 root = tkinter.Tk()
 root.withdraw()#hides the initial dialog window for tikinter
@@ -55,7 +57,7 @@ remember_dest_starting_loc = ''#used to store previous destination folder to rep
 license_info_tags = ['readme', 'read me', 'license', 'tips']#Used to match on any license file or read me and copy into every destination
 license_file_moves = []#Will hold a list of the source paths of all license and read me files that matches license_info_tags. Will contain the abs path of the license files. 
 move_licenses = True# If set to true a coppy of the License files and read me files matched in license_info_tags list will be move to all destination folders.
-remember_source_starting_loc = r'Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Ultimate Bangers & Anthems\Black Octopus Sound - Ultimate Bangers & Anthems'
+remember_source_starting_loc = r'Z:\Music_RT\01_Samples\Black Octopus\Black Octopus Sound - Vocal Atmospheres by Cory Friesenhan\Black Octopus Sound - Vocal Atmospheres by Cory Friesenhan'
 remember_dest_starting_loc = r'Z:\Music_RT\13_Sorted_Samples'
 
 class Error(Exception):
@@ -70,25 +72,20 @@ def txt_to_dict(filepath):#Reads in all of the items from a text file into a lis
 	for line in file:
 		colon_seperated = line.split(':')
 		key = colon_seperated[0].strip()
-		
-		logging.debug('Key: %s Tags:' % (key))
 		file_dict[key] = []
 		tag_list = []
 		if key != "":
 			for x in colon_seperated[1].split(','):
 				if x.strip() != '':
-					logging.debug('logic was True')
 					tag_list.append(x.strip())
-					logging.debug('tag_list' % (tag_list))
-				else:
-					logging.debug('logic was False')
-				logging.debug('x.strip() : %s' % (x.strip()))
+					#logging.debug('tag_list' % (tag_list))
+				#logging.debug('x.strip() : %s' % (x.strip()))
 				
 			#logging.debug('tag_list' % (tags_list))
 		file_dict[key].append(tag_list)
 
 			#file_dict[key].append([x.strip() for x in colon_seperated[1].split(',')])
-	logging.debug('file_dict: %s' % (file_dict))
+	#logging.debug('file_dict: %s' % (file_dict))
 	return file_dict
 
 def insert_key_folder_location(dest_dict, dest_path, company):
@@ -598,22 +595,26 @@ while continue_program:
 		#search for license files in directories
 		logging.debug('Searching for License and Read me Files')
 		for tag in license_info_tags:
-				license_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)
+				license_regex = re.compile(r'.*(' + re.escape(tag) + ').*', re.IGNORECASE)
+				logging.debug("Match was made with tag %s " % (tag))
 				license_matches = list(filter(license_regex.match, files))
 				for match in license_matches:
 					license_match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
 					license_file_moves.append(license_match_path)#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
+					
 					files.remove(match)#removes the license_match_path from the files list so that it isn't matched more than once.
 					logging.debug('License or Read me File found %s' %(os.path.basename(license_match_path)))
 		#Searches through all of the folders 
 		for key in dest_dict:
 			with tqdm(total = len(dest_dict[key][1]), desc=key) as pbar1:
 				for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
-					tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
+					tag_regex = re.compile(r'.*(' + re.escape(tag) + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
 					local_matches = list(filter(tag_regex.match, folders))#This is where the actual matching takes place. The filter method is called and the tag_regex.match is passed in to determine the match criteria. The folders list is passed in which is a list of all Folder names in the directory currently being iterated through.
+					
 					for match in local_matches:#Iterates through the filter object which contains all matches from the filter
 						match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
 						dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company, match))#Creates the full path of the matched file
+						logging.debug("Match was made with Tag: %s Match: %s" % (tag, match))
 						logging.debug('A match was made on %s' % (match_path))
 						folder_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
 						folders.remove(match)#removes the match from the files list so that it isn't matched more than once.
@@ -625,12 +626,13 @@ while continue_program:
 		#Searches through all of the files 
 		for key in dest_dict:
 			for tag in dest_dict[key][1]:#iterates through all of the possible tags in the dest_dict
-				tag_regex = re.compile('.*(' + tag + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
+				tag_regex = re.compile(r'.*(' + re.escape(tag) + ').*', re.IGNORECASE)#builds a regex string to match on any string that contains one of the tag strings. Ignores case
 				local_matches = list(filter(tag_regex.match, files))#This is where the actual matching takes place. the filter method is called and the tag_regex..match is passed in to determine the match criteria. The files list is passed in which is a list of all file names in the directory currently being iterated through.
 				for match in local_matches:#Iterates through the filter object which contains all matches from the filter
 					match_path = os.path.abspath(os.path.join(root, match))#Creates the full path of the matched file
 					dest_path =  os.path.abspath(os.path.join(dest_dict[key][0],current_company))#Creates the full path of the matched file
 					logging.debug('A match was made on %s' % (match_path))
+					logging.debug("Match was made with Tag: %s Match: %s" % (tag, match))
 					file_moves.append([match_path, dest_path,source_folder,destination_folder])#appends the matched file path and the location it came from to the moves list which tracks all of the items to be moved.
 					files.remove(match)#removes the match from the files list so that it isn't matched more than once.
 		for file in files:#this will search through any file left in the files list and add it as a unmatched file. 
