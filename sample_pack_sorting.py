@@ -419,8 +419,9 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 						license_move(license_file_moves,moving_to_folder)
 
 					for filename in filenames:
-						if os.path.isfile(filename) == False:
-							shutil.copy(os.path.abspath(os.path.join(folderName,filename)), moving_to_folder)
+						dest_file_name = os.path.abspath(os.path.join(folderName,filename))
+						if os.path.isfile(dest_file_name) == False:
+							shutil.copy(dest_file_name, moving_to_folder)
 							files_bar.set_description('File: %-37s ' % os.path.basename(filename))
 							logging.debug('File %s was copied.' % (os.path.dirname(filename)))
 						else:
