@@ -6,4 +6,3 @@ Synths & Insts						: synth, instrument, inst, melodic,melody, lead, synthesizer
 Vocal								: vox, vocal, vocal atmosphere, acapella , vocal chop, chop, vocod, male, female, vocalist, vocal swell,Melodic Phrases, ooh, ahh, adlib melodies, scat
 Midi								: .midi, .mid, midi
 Learning Resources					: videos, walkthrough, tutorial
-Massive Presets						: .nmsv
