@@ -38,7 +38,9 @@ from tqdm import tqdm
 
 #Setup logging
 logging.basicConfig(filename='log_file.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-logging.debug('================================================New Run================================================')
+logging.debug('================================================================================================================================================New Run================================================================================================================================================')
+logging.debug('=======================================================================================================================================================================================================================================================================================================')
+logging.debug('=======================================================================================================================================================================================================================================================================================================')
 #logging.basicConfig( level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 root = tkinter.Tk()
 root.withdraw()#hides the initial dialog window for tikinter
@@ -396,7 +398,8 @@ def summarize_unmoved_files(list_of_unmoved_items):##This will take a list of fi
 
 def execute_folder_moves(list_of_folder_moves):#Actually performs the moves passed into the function
 	if list_of_folder_moves != []:	
-		total_files_counter = count_files_and_folders(list_of_folder_moves[0][2])
+		total_folders_counter = len(list_of_folder_moves)
+		total_files_counter = count_files_in_folders(list_of_folder_moves[0][2])
 		files_bar = tqdm(total=total_files_counter, desc="Files")
 		folders_bar = tqdm(total=total_folders_counter, desc="Folders")
 		for move in list_of_folder_moves:
@@ -404,29 +407,32 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 			try:
 				#local_folder = os.path.basename(move[0])#not sure i need this
 				for folderName, subfolders, filenames in os.walk(move[0]):
-					#logging.debug('Moving_to_Folder is "%s" ' % (os.path.join(move[1], os.path.relpath(folderName, move[0]))))
-					moving_to_folder = os.path.abspath(os.path.join(move[1], os.path.relpath(folderName, move[0])))
-					#logging.debug('Isdir? %s' % (os.path.isdir(moving_to_folder)))
-					if os.path.isdir(moving_to_folder) == False:
-						logging.debug('Trying to Create folder "%s" ' % (moving_to_folder))
+					logging.debug('Moving_to_Folder is "%s" ' % (os.path.abspath(os.path.join(move[1], os.path.relpath(folderName, move[0])))))
+					destination_folder = os.path.abspath(os.path.join(move[1], os.path.relpath(folderName, move[0])))
+					#logging.debug('Isdir? %s' % (os.path.isdir(destination_folder)))
+					if not os.path.isdir(destination_folder):
+						logging.debug('Trying to Create folder "%s" ' % (destination_folder))
 
-						os.makedirs(moving_to_folder)
-						logging.debug('Folder %s was created.' % (os.path.dirname(moving_to_folder)))
+						os.makedirs(destination_folder)
+						logging.debug('Folder %s was created.' % (os.path.dirname(destination_folder)))
 					else:
-						logging.debug('Folder %s ALREADY EXISTS.' % (os.path.dirname(moving_to_folder)))
+						logging.debug('Folder %s ALREADY EXISTS.' % (destination_folder))
 
 					if move_licenses:
-						license_move(license_file_moves,moving_to_folder)
+						license_move(license_file_moves, destination_folder)
 
 					for filename in filenames:
-						dest_file_name = os.path.abspath(os.path.join(folderName,filename))
-						if os.path.isfile(dest_file_name) == False:
-							shutil.copy(dest_file_name, moving_to_folder)
+						source_filename = os.path.abspath(os.path.join(folderName,filename))
+						destination_filename = os.path.abspath(os.path.join(destination_folder, os.path.basename(source_filename)))
+						#logging.debug('Isfile? %s' % (os.path.isfile(destination_filename)))
+						#logging.debug('Source Files Name is "%s" Source File name: %s ' % (source_filename, destination_filename))
+						if os.path.isfile(destination_filename) == False:
+							shutil.copy(source_filename, destination_folder)
 							files_bar.set_description('File: %-37s ' % os.path.basename(filename))
-							logging.debug('File %s was copied.' % (os.path.dirname(filename)))
+							logging.debug('Folder File %s was copied.' % (os.path.dirname(filename)))
 						else:
 							files_bar.set_description('File: %-23s ALREADY EXISTS' % os.path.basename(filename))
-							logging.debug('File %s ALREADY EXISTS.' % (os.path.basename(filename)))
+							logging.debug('Folder File %s ALREADY EXISTS.' % (os.path.basename(filename)))
 						files_bar.update(1)
 
 				folders_bar.update(1)
@@ -442,17 +448,11 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 				#logging.debug('Folder "%s" has been deleted.'%(move[0]))
 
 			except distutils.errors.DistutilsFileError:
-				logging.debug('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
-				print('Folder already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
+				logging.debug('Folder ALREADY EXISTS: "%s" TO %s SKIPPED.'%(move[0], move[1]))
+				print('Folder ALREADY EXISTS: "%s" TO %s SKIPPED.'%(move[0], move[1]))
 				skipped_folders.append([move[0],move[1]])
 				continue
-			'''
-			except:
-				logging.debug('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
-				print('Error while trying to move Folder "%s" to %s SKIPPED.'%(move[0], move[1]))
-				skipped_folders.append([move[0],move[1]])
-				continue
-			'''
+			
 		files_bar.close()
 		folders_bar.close()
 	else:
@@ -460,69 +460,51 @@ def execute_folder_moves(list_of_folder_moves):#Actually performs the moves pass
 
 def execute_file_moves(list_of_file_moves):#Actually performs the moves passed into the function
 	if list_of_file_moves != []:
-		total_files_counter = count_files_and_folders(list_of_file_moves[0][2])
+		total_files_counter = len(list_of_file_moves)
+		#total_files_counter = count_files_in_folders(list_of_file_moves[0][2])
 		files_bar = tqdm(total=total_files_counter, desc="Files")
-		
 		for move in list_of_file_moves:
 			try:
-				moving_to_folder = os.path.abspath(move[1])
-				path = os.path.dirname(moving_to_folder)
+				destination_folder = os.path.abspath(move[1])
+				destination_filename = os.path.abspath(os.path.join(move[1], os.path.basename(destination_filename)))
+				source_filename = os.path.abspath(destination_filename)
+				logging.debug('destination_filename %s Exists? %s ' % (destination_filename, os.path.isfile(destination_filename)))
+				path = os.path.dirname(destination_folder)
 
-				if os.path.isdir(os.path.abspath(moving_to_folder)) == False:
+				if not os.path.isdir(os.path.abspath(destination_folder)):
 					os.makedirs(move[1])
-					logging.debug('Folder %s was created.' % (os.path.dirname(moving_to_folder)))
+					logging.debug('Folder %s was created.' % (os.path.dirname(destination_folder)))
 		
 				if move_licenses:
-					license_move(license_file_moves,moving_to_folder)
+					license_move(license_file_moves, destination_folder)
 
-				if os.path.exists(move[0]):
-					files_bar.set_description('File: %-37s ' % os.path.basename(move[0]))
-					logging.debug('Trying to move File "%s" to Folder: %s '%(move[0], os.path.abspath(os.path.join(move[1], os.path.basename(move[0])))))
+				if not os.path.isfile(destination_filename):
+					files_bar.set_description('File: %-37s ' % os.path.basename(source_filename))
+					logging.debug('Trying to move File "%s" to Folder: %s '%(source_filename, destination_filename))
 					#bypassing move
-					#distutils.file_util.move_file(move[0],os.path.abspath(os.path.join(move[1], os.path.basename(move[0]))))
-					distutils.file_util.copy_file(move[0],os.path.abspath(os.path.join(move[1], os.path.basename(move[0]))))
-					logging.debug('File "%s" has been moved.'%(move[0]))
+					#distutils.file_util.move_file(destination_filename,os.path.abspath(os.path.join(move[1], os.path.basename(destination_filename))))
+					distutils.file_util.copy_file(source_filename, destination_filename)
+					logging.debug('File "%s" has been moved.'%(source_filename))
 				else:
-					logging.debug('File "%s" has already been moved.'%(move[0]))
+					logging.debug('File ALREADY EXISTS: "%s" TO %s SKIPPED.'%(source_filename, move[1]))
+					files_bar.set_description('File: %-23s ALREADY EXISTS' % os.path.basename(destination_filename))
 				files_bar.update(1)
 
 			except distutils.errors.DistutilsFileError:
-				logging.debug('File already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
-				#print('File already exists: "%s" TO %s SKIPPED.'%(move[0], move[1]))
+				logging.debug('File ALREADY EXISTS: "%s" TO %s SKIPPED.'%(source_filename, move[1]))
+				files_bar.set_description('File: %-23s ALREADY EXISTS' % os.path.basename(destination_filename))
+				
 				files_bar.update(1)
 				continue
+
 			except:
-				logging.debug('Error while trying to move File "%s" to %s SKIPPED.'% (str(move[0]), str(move[1])))
-				#print('Error while trying to move File "%s" to %s SKIPPED.'%(str(move[0]), str(move[1])))
+				logging.debug('Error while trying to move File "%s" to %s SKIPPED.'%(source_filename, move[1]))
+				files_bar.set_description('Error while trying to move File: %-10s' % os.path.basename(moving_to_file))
 				files_bar.update(1)
 				continue
 		files_bar.close()
 	else:
 		logging.debug('No Files to move. Skipping file moves.')
-
-def count_files_and_folders(folder_path):#Takes in a folder path then counts all the files and folders inside that directory. Then returns a list of intergers. Index 0 is the total of files and Index 1 is the total of folders.
-	logging.debug('File and Folder count initiated')
-	total_files_counter = 0
-	total_folders_counter = 0 
-	file_count_bar = tqdm(desc="Files Counted ")
-	folder_count_bar = tqdm(desc="Folders Counted ")
-	for folderName, subfolders, filenames in os.walk(folder_path):
-		for filename in sorted(filenames):
-			total_files_counter += 1
-			file_count_bar.update(1)
-		folder_count_bar.update(1)
-		total_folders_counter += 1
-	file_count_bar.close()
-	folder_count_bar.close()
-	logging.debug('Before Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
-	total_files_counter -= skip_file_count
-	total_folders_counter -= skip_folder_count
-	logging.debug('After Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
-	return total_files_counter
-	r'''
-	Description		Total Files		Total Folders 	
-	Index			0				1	
-	'''
 			
 def roll_back_moves(list_of_folder_moves, list_of_file_moves):#Takes in 2 lists of all the moves performed and reverses them. 
 	r'''
@@ -571,7 +553,29 @@ def license_move(license_file_moves, destination):#Moves the all files in licens
 		except:
 			logging.debug('Error while moving license file %s' % os.path.basename(file))
 
-
+def count_files_in_folders(folder_path):#Takes in a folder path then counts all the files and folders inside that directory. Then returns a list of intergers. Index 0 is the total of files and Index 1 is the total of folders.
+	logging.debug('File and Folder count initiated')
+	total_files_counter = 0
+	total_folders_counter = 0 
+	file_count_bar = tqdm(desc="Files Counted ")
+	folder_count_bar = tqdm(desc="Folders Counted ")
+	for folderName, subfolders, filenames in os.walk(folder_path):
+		for filename in sorted(filenames):
+			total_files_counter += 1
+			file_count_bar.update(1)
+		folder_count_bar.update(1)
+		total_folders_counter += 1
+	file_count_bar.close()
+	folder_count_bar.close()
+	logging.debug('Before Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
+	total_files_counter -= skip_file_count
+	total_folders_counter -= skip_folder_count
+	logging.debug('After Skip Removal total_folders_counter = %s total_files_counter = %s' % (total_folders_counter, total_files_counter))
+	return total_files_counter
+	r'''
+	Description		Total Files		Total Folders 	
+	Index			0	
+	'''
 continue_program = True#while this remains true the programm will continue to run and keep asking for more packs
 #Main loop
 while continue_program:
